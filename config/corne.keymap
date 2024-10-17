@@ -38,8 +38,8 @@
 
             bindings = <
 &kp TAB           &kp N1            &kp N2        &kp N3       &kp N4         &kp N5           &kp N6                  &kp N7                   &kp N8                 &kp N9             &kp N0                   &kp BSPC
-&kp LEFT_CONTROL  &kt LS(LC(LGUI))  &kp HOME      &kp END      &kp INSERT     &kp DELETE       &kp LEFT                &kp DOWN                 &kp UP                 &kp RIGHT          &mkp MB4                 &mkp MB5
-&kp LEFT_SHIFT    &kt LS(LGUI)      &kt LC(LGUI)  &kp PAGE_UP  &kp PAGE_DOWN  &kp BACKSPACE    &kp LG(LS(LEFT_BRACE))  &kp LS(LG(RIGHT_BRACE))  &kt RC(RIGHT_COMMAND)  &kt RS(RIGHT_GUI)  &kp RS(RC(RIGHT_SHIFT))  &kt LS(LA(LC(LEFT_GUI)))
+&kp LEFT_CONTROL  &kp LS(LC(LGUI))  &kp HOME      &kp END      &kp INSERT     &kp DELETE       &kp LEFT                &kp DOWN                 &kp UP                 &kp RIGHT          &mkp MB4                 &mkp MB5
+&kp LEFT_SHIFT    &kp LS(LGUI)      &kp LC(LGUI)  &kp PAGE_UP  &kp PAGE_DOWN  &kp BACKSPACE    &kp LG(LS(LEFT_BRACE))  &kp LS(LG(RIGHT_BRACE))  &kp RC(RIGHT_COMMAND)  &kp RS(RIGHT_GUI)  &kp RS(RC(RIGHT_SHIFT))  &kp LS(LA(LC(LEFT_GUI)))
                                                   &kp LGUI     &trans         &kp SPACE        &kp RET                 &trans                   &kp RALT
             >;
         };
@@ -53,8 +53,8 @@
 
             bindings = <
 &kp TAB    &kp EXCL              &kp AT                &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK          &kp LPAR          &kp RPAR  &kp BSPC
-&kp LCTRL  &kt LS(LC(LEFT_GUI))  &kp LPAR              &kp RPAR          &kp LBRC  &kp RBRC     &kp MINUS  &kp EQUAL  &kp LESS_THAN      &kp GREATER_THAN  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kt LG(LEFT_SHIFT)    &kp LC(LEFT_COMMAND)  &kp F3            &kp F4    &kp F5       &kp UNDER  &kp PLUS   &kp SLASH          &kp QUESTION      &kp PIPE  &kp TILDE
+&kp LCTRL  &kp LS(LC(LEFT_GUI))  &kp LPAR              &kp RPAR          &kp LBRC  &kp RBRC     &kp MINUS  &kp EQUAL  &kp LESS_THAN      &kp GREATER_THAN  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LG(LEFT_SHIFT)    &kp LC(LEFT_COMMAND)  &kp F3            &kp F4    &kp F5       &kp UNDER  &kp PLUS   &kp SLASH          &kp QUESTION      &kp PIPE  &kp TILDE
                                                        &kp LEFT_COMMAND  &trans    &kp SPACE    &kp RET    &trans     &kp LG(RIGHT_ALT)
             >;
         };
@@ -62,7 +62,7 @@
         layer_3 {
             bindings = <
 &bt BT_CLR  &bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp F7   &kp F8   &kp F9
-&kp K_MUTE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kt GLOBE     &trans        &trans          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F10  &kp F11  &kp F12
+&kp K_MUTE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kt GLOBE     &kp F13       &trans          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F10  &kp F11  &kp F12
 &kp F1      &kp F2          &kp F3           &kp F4        &kp F5        &kp F6          &kp N7        &kp N8        &kp N9        &kp N0   &kp F13  &kp F14
                                              &trans        &trans        &trans          &trans        &trans        &trans
             >;
