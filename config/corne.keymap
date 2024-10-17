@@ -40,7 +40,7 @@
 &kp TAB           &kp N1            &kp N2        &kp N3       &kp N4         &kp N5           &kp N6                  &kp N7                   &kp N8                 &kp N9             &kp N0                   &kp BSPC
 &kp LEFT_CONTROL  &kp LS(LC(LGUI))  &kp HOME      &kp END      &kp INSERT     &kp DELETE       &kp LEFT                &kp DOWN                 &kp UP                 &kp RIGHT          &mkp MB4                 &mkp MB5
 &kp LEFT_SHIFT    &kp LS(LGUI)      &kp LC(LGUI)  &kp PAGE_UP  &kp PAGE_DOWN  &kp BACKSPACE    &kp LG(LS(LEFT_BRACE))  &kp LS(LG(RIGHT_BRACE))  &kp RC(RIGHT_COMMAND)  &kp RS(RIGHT_GUI)  &kp RS(RC(RIGHT_SHIFT))  &kp LS(LA(LC(LEFT_GUI)))
-                                                  &kp LGUI     &trans         &kp SPACE        &kp RET                 &trans                   &kp RALT
+                                                  &kp LGUI     &trans         &kp SPACE        &kp RET                 &kp RIGHT_GUI            &kp RALT
             >;
         };
 
