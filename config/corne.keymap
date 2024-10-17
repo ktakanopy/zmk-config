@@ -52,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL              &kp AT                &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK          &kp LPAR          &kp RPAR  &kp BSPC
-&kp LCTRL  &kp LS(LC(LEFT_GUI))  &kp LPAR              &kp RPAR          &kp LBRC  &kp RBRC     &kp MINUS  &kp EQUAL  &kp LESS_THAN      &kp GREATER_THAN  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp LG(LEFT_SHIFT)    &kp LC(LEFT_COMMAND)  &kp F3            &kp F4    &kp F5       &kp UNDER  &kp PLUS   &kp SLASH          &kp QUESTION      &kp PIPE  &kp TILDE
-                                                       &kp LEFT_COMMAND  &trans    &kp SPACE    &kp RET    &trans     &kp LG(RIGHT_ALT)
+&kp TAB    &kp EXCL              &kp AT                &kp HASH          &kp DLLR          &kp PRCNT            &kp CARET  &kp AMPS   &kp ASTRK      &kp LPAR          &kp RPAR  &kp BSPC
+&kp LCTRL  &kp LS(LC(LEFT_GUI))  &kp LPAR              &kp RPAR          &kp LBRC          &kp RBRC             &kp MINUS  &kp EQUAL  &kp LESS_THAN  &kp GREATER_THAN  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LG(LEFT_SHIFT)    &kp LC(LEFT_COMMAND)  &kp LG(LEFT_ALT)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp UNDER  &kp PLUS   &kp SLASH      &kp QUESTION      &kp PIPE  &kp TILDE
+                                                       &kp LEFT_COMMAND  &trans            &kp SPACE            &kp RET    &trans     &kp RIGHT_ALT
             >;
         };
 
