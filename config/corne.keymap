@@ -20,10 +20,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U         &kp I      &kp O    &kp P      &kp BACKSPACE
-&kp LCTRL     &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J         &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LEFT_ALT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M         &kp COMMA  &kp DOT  &kp SLASH  &kp ESCAPE
-                            &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 ESCAPE  &kp RALT
+&kp TAB       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U         &kp I       &kp O    &kp P      &kp BACKSPACE
+&kp LCTRL     &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J         &kp K       &kp L    &kp SEMI   &kp SQT
+&kp LEFT_ALT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M         &kp COMMA   &kp DOT  &kp SLASH  &kp ESCAPE
+                            &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 ESCAPE  &kp LSHIFT
             >;
         };
 
@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4  &kp N5       &kp NUMBER_6  &kp N7         &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none         &none        &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp CLCK
-&kp LEFT_ALT      &none   &none               &none                &none         &none        &none         &kp HOME       &kp END       &none            &none       &none
-                                              &kp LGUI             &trans        &kp SPACE    &kp RET       &kp RIGHT_GUI  &kp RALT
+&kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4  &kp N5       &kp NUMBER_6  &kp N7    &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none         &none        &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp CLCK
+&kp LEFT_ALT      &none   &none               &none                &none         &none        &none         &kp HOME  &kp END       &none            &none       &none
+                                              &kp LGUI             &trans        &kp SPACE    &kp RET       &none     &kp LSHIFT
             >;
         };
 
@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE        &kp TILDE         &kp HASH          &kp AMPS   &kp PIPE         &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp BACKSPACE
-&kp LCTRL  &kp EXCLAMATION  &kp UNDER         &kp COLON         &kp EQUAL  &kp PERCENT      &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none
-&kp LSHFT  &kp TILDE        &kp LC(QUESTION)  &kp ASTERISK      &kp PLUS   &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &none
-                                              &kp LEFT_COMMAND  &trans     &kp SPACE        &kp RET    &trans            &kp RIGHT_ALT
+&kp TAB    &kp GRAVE        &kp TILDE     &kp HASH          &kp AMPS   &kp PIPE         &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp BACKSPACE
+&kp LCTRL  &kp EXCLAMATION  &kp UNDER     &kp COLON         &kp EQUAL  &kp PERCENT      &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none
+&kp LSHFT  &kp TILDE        &kp QUESTION  &kp ASTERISK      &kp PLUS   &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &none
+                                          &kp LEFT_COMMAND  &mo 3      &kp SPACE        &kp RET    &trans            &kp RIGHT_ALT
             >;
         };
 
