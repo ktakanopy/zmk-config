@@ -25,6 +25,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <12 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
