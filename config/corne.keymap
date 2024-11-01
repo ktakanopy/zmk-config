@@ -36,9 +36,9 @@
 
             bindings = <
 &kp TAB       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U         &kp I       &kp O    &kp P      &kp BACKSPACE
-&kp LCTRL     &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J         &kp K       &kp L    &kp SEMI   &kp SQT
+&mt LCTRL ESC    &kp A  &kp S  &kp D     &kp F  &kp G     &kp H    &kp J         &kp K       &kp L    &kp SEMI   &kp SQT
 &kp LEFT_ALT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M         &kp COMMA   &kp DOT  &kp SLASH  &kp ESCAPE
-                            &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 ESCAPE  &kp LSHIFT
+                            &kp LGUI &lt 3 SPACE &mo 1   &lt 2 RET &lt 3 BACKSPACE &kp LSHIFT
             >;
         };
 
@@ -53,7 +53,7 @@
 &kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4  &kp N5       &kp NUMBER_6  &kp N7    &kp N8        &kp N9           &kp N0      &kp BACKSPACE
 &kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none         &kp ESCAPE       &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp CLCK
 &kp LEFT_ALT      &none   &none               &none                &none         &none        &none         &kp HOME  &kp END       &none            &none       &none
-                                              &kp LGUI             &trans        &kp SPACE    &kp RET       &none     &kp LSHIFT
+                                              &kp LGUI             &kp SPACE        &none    &kp RET      &kp BACKSPACE &kp LSHIFT
             >;
         };
 
@@ -68,25 +68,25 @@
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH          &kp AMPS   &kp PIPE         &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp BACKSPACE
 &kp LCTRL  &kp EXCLAMATION  &kp UNDER     &kp COLON         &kp EQUAL  &kp PERCENT      &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none
 &kp LSHFT  &kp TILDE        &kp QUESTION  &kp ASTERISK      &kp PLUS   &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &none
-                                          &kp LEFT_COMMAND  &mo 3      &kp SPACE        &kp RET    &trans            &kp RIGHT_ALT
+                                          &kp LGUI   &kp SPACE   &none  &kp RET    &trans    &kp LSHIFT
             >;
         };
 
         layer_3 {
-            bindings = <
-&bt BT_CLR  &bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F16
-&kp K_MUTE  &kp C_VOL_DN    &kp C_VOLUME_UP  &none         &none         &none           &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &kp F17
-&none       &none           &none            &none         &none         &none           &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &kp F18
-                                             &trans        &trans        &trans          &trans   &trans   &trans
-            >;
-        };
+        bindings = <
+&kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6      &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+&kp LCTRL   &trans  &trans  &trans   &bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3   &trans  &trans 
+&kp LSHFT  &kp K_MUTE  &kp C_VOL_DN    &kp C_VOLUME_UP              &none      &none          &none      &none      &none      &none      &none      &none
+                                            &kp LGUI  &kp SPACE   &none    &kp RET      &kp BACKSPACE &kp LSHIFT
+        >;
+    };
 
         layer_4 {
             bindings = <
 &kp GRAVE  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &trans  &trans 
 &kp ESC    &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT  &trans  &trans 
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans    &msc SCROLL_LEFT &msc SCROLL_DOWN &msc SCROLL_UP &msc SCROLL_RIGHT  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+                            &kp LGUI &kp SPACE   &trans    &mkp RCLK  &mkp LCLK  &trans
             >;
         };
     };
