@@ -80,8 +80,8 @@
 
         layer_4 {
             bindings = <
-&kp GRAVE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESC    &trans  &trans  &trans  &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT  &trans  &trans 
+&kp GRAVE  &trans  &trans  &trans  &trans  &trans    &mwh SCROLL_LEFT   &mmv MOVE_UP    &mwh SCROLL_RIGHT   &mwh SCROLL_UP  &trans  &trans
+&kp ESC    &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT  &trans  &trans 
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
