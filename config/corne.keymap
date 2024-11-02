@@ -25,14 +25,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <12 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -47,10 +40,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E     &kp R        &kp T    &kp Y      &kp U            &kp I       &kp O    &kp P      &kp BACKSPACE
-&mt LCTRL ESC  &kp A  &kp S  &kp D     &kp F        &kp G    &kp H      &kp J            &kp K       &kp L    &kp SEMI   &kp SQT
-&kp LEFT_ALT   &kp Z  &kp X  &kp C     &kp V        &kp B    &kp N      &kp M            &kp COMMA   &kp DOT  &kp SLASH  &kp LEFT_SHIFT
-                             &kp LGUI  &lt 4 SPACE  &mo 1    &lt 2 RET  &lt 3 BACKSPACE  &kp LSHIFT
+&kp TAB        &kp Q  &kp W  &kp E     &kp R        &kp T    &kp Y      &kp U          &kp I       &kp O    &kp P      &kp BACKSPACE
+&mt LCTRL ESC  &kp A  &kp S  &kp D     &kp F        &kp G    &kp H      &kp J          &kp K       &kp L    &kp SEMI   &kp SQT
+&kp LEFT_ALT   &kp Z  &kp X  &kp C     &kp V        &kp B    &kp N      &kp M          &kp COMMA   &kp DOT  &kp SLASH  &mo 3
+                             &kp LGUI  &lt 4 SPACE  &mo 1    &lt 2 RET  &kp BACKSPACE  &kp LSHIFT
             >;
         };
 
@@ -64,10 +57,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N7         &kp N8        &kp N9           &kp N0        &kp BACKSPACE
-&kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none         &kp ESCAPE    &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word    &kp LEFT_ALT
-&kp LEFT_ALT      &none   &none               &none                &none         &none         &none         &kp HOME       &kp END       &none            &kp CAPSLOCK  &kp LEFT_SHIFT
-                                              &kp LGUI             &kp SPACE     &none         &kp RET       &kp BACKSPACE  &kp LSHIFT
+&kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4          &kp N5               &kp NUMBER_6  &kp N7      &kp N8      &kp N9   &kp N0        &kp DELETE
+&kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LA(LS(LCTRL))     &kp LG(LS(LCTRL))    &caps_word    &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT     &none
+&kp LEFT_ALT      &none   &kp PAGE_UP         &kp PAGE_DOWN        &kp LS(LA(LC(LGUI)))  &none                &none         &none       &kp HOME    &kp END  &kp CAPSLOCK  &none
+                                              &kp LGUI             &kp SPACE             &none                &kp RET       &kp DELETE  &kp LSHIFT
             >;
         };
 
@@ -83,7 +76,7 @@
             bindings = <
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp PIPE         &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp BACKSPACE
 &kp LCTRL  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT      &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none
-&kp LSHFT  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &none
+&kp LALT   &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &none
                                           &kp LGUI      &kp COMMA  &kp DOT          &kp RET    &trans            &kp LSHIFT
             >;
         };
@@ -93,7 +86,7 @@
             bindings = <
 &kp F1     &kp F2      &kp F3        &kp F4           &kp F5          &kp F6          &kp F7        &kp F8         &kp F9        &kp F10       &kp F11  &kp F12
 &kp LCTRL  &trans      &trans        &trans           &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &trans   &trans
-&kp LSHFT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none           &none           &none         &none          &none         &none         &none    &none
+&kp LALT   &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none           &none           &none         &none          &none         &none         &none    &none
                                      &kp LGUI         &kp SPACE       &none           &kp RET       &kp BACKSPACE  &kp LSHIFT
             >;
         };
@@ -101,10 +94,10 @@
         layer_4 {
             display-name = "mouse";
             bindings = <
-&kp GRAVE  &trans  &trans  &trans    &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&kp ESC    &trans  &trans  &trans    &trans     &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans    &trans     &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-                           &kp LGUI  &kp SPACE  &trans    &mkp LCLK       &mkp RCLK       &trans
+&kp TAB    &trans  &trans  &trans    &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans     &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&kp LALT   &trans  &trans  &trans    &trans     &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+                           &kp LGUI  &kp SPACE  &trans    &mkp LCLK       &mkp RCLK       &kp LSHIFT
             >;
         };
     };
