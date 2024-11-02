@@ -31,7 +31,7 @@
         tilde_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_press>, <&kp TILDE &kp SPACE>;
+            bindings = <&none>, <&macro_tap>, <&kp TILDE &kp SPACE>;
 
             label = "NEW_MACRO";
         };
@@ -39,7 +39,7 @@
         home_tilde: home_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_press>, <&kp TILDE &kp SLASH &kp DOT>;
+            bindings = <&none>, <&macro_tap>, <&kp TILDE &kp SPACE &kp SLASH>;
 
             label = "HOME_TILDE";
         };
