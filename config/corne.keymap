@@ -43,6 +43,14 @@
 
             label = "HOME_TILDE";
         };
+
+        g_: g_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp G &kp UNDERSCORE>;
+
+            label = "G_";
+        };
     };
 
     keymap {
@@ -58,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E         &kp R        &kp T    &kp Y      &kp U            &kp I       &kp O    &kp P             &kp BACKSPACE
-&mt LCTRL ESC  &kp A  &kp S  &kp D         &kp F        &kp G    &kp H      &kp J            &kp K       &kp L    &kp SINGLE_QUOTE  &kp LEFT_COMMAND
-&kp LEFT_ALT   &kp Z  &kp X  &kp C         &kp V        &kp B    &kp N      &kp M            &kp COMMA   &kp DOT  &lt 3 SLASH       &kp LEFT_SHIFT
-                             &mt LGUI ESC  &lt 1 SPACE  &mo 4    &lt 2 RET  &lt 1 BACKSPACE  &kp LSHIFT
+&kp TAB        &kp Q    &kp W  &kp E         &kp R        &kp T    &kp Y      &kp U            &kp I       &kp O    &kp P             &kp BACKSPACE
+&mt LCTRL ESC  &kp A    &kp S  &kp D         &kp F        &kp G    &kp H      &kp J            &kp K       &kp L    &kp SINGLE_QUOTE  &kp LEFT_COMMAND
+&kp LEFT_ALT   &lt 3 Z  &kp X  &kp C         &kp V        &kp B    &kp N      &kp M            &kp COMMA   &kp DOT  &lt 3 SLASH       &kp LEFT_SHIFT
+                               &mt LGUI ESC  &lt 1 SPACE  &mo 4    &lt 2 RET  &lt 1 BACKSPACE  &kp LSHIFT
             >;
         };
 
@@ -75,10 +83,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp N1  &kp N2              &kp N3               &kp NUMBER_4          &kp N5               &kp NUMBER_6  &kp N7         &kp N8      &kp N9   &kp N0     &kp DELETE
-&kp LEFT_CONTROL  &none   &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LA(LS(LCTRL))     &kp LG(LS(LCTRL))    &caps_word    &kp LEFT       &kp DOWN    &kp UP   &kp RIGHT  &kp LEFT_COMMAND
-&kp LEFT_ALT      &none   &kp PAGE_UP         &kp PAGE_DOWN        &kp LS(LA(LC(LGUI)))  &none                &tilde_macro  &home_tilde    &kp HOME    &kp END  &none      &kp LEFT_SHIFT
-                                              &kp LGUI             &kp SPACE             &none                &kp RET       &kp BACKSPACE  &kp DELETE
+&kp TAB           &kp N1             &kp N2              &kp N3               &kp NUMBER_4          &kp N5               &kp NUMBER_6  &kp N7         &kp N8      &kp N9   &kp N0     &kp DELETE
+&kp LEFT_CONTROL  &kp LA(LS(LCTRL))  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LA(LS(LCTRL))     &kp LG(LS(LCTRL))    &caps_word    &kp LEFT       &kp DOWN    &kp UP   &kp RIGHT  &kp LEFT_COMMAND
+&kp LEFT_ALT      &none              &kp PAGE_UP         &kp PAGE_DOWN        &kp LS(LA(LC(LGUI)))  &g_                  &tilde_macro  &home_tilde    &kp HOME    &kp END  &none      &kp LEFT_SHIFT
+                                                         &kp LGUI             &kp SPACE             &none                &kp RET       &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -102,10 +110,10 @@
         fun {
             display-name = "fun";
             bindings = <
-&kp F1     &kp F2      &kp F3        &kp F4           &kp F5          &kp F6          &kp F7        &kp F8         &kp F9        &kp F10       &kp F11  &kp F12
-&kp LCTRL  &trans      &trans        &trans           &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &trans   &trans
-&kp LALT   &kp K_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none           &none           &none         &none          &none         &none         &none    &none
-                                     &kp LGUI         &kp SPACE       &none           &kp RET       &kp BACKSPACE  &kp LSHIFT
+&kp F1     &kp F2  &kp F3        &kp F4           &kp F5          &kp F6          &kp F7        &kp F8         &kp F9        &kp F10       &kp F11  &kp F12
+&kp LCTRL  &trans  &trans        &trans           &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &trans   &kp LEFT_COMMAND
+&kp LALT   &none   &kp C_VOL_DN  &kp C_VOLUME_UP  &none           &none           &none         &none          &none         &none         &none    &kp LEFT_SHIFT
+                                 &kp LGUI         &kp SPACE       &none           &kp RET       &kp BACKSPACE  &kp LSHIFT
             >;
         };
 
