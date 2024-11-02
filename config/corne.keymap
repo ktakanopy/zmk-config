@@ -93,10 +93,10 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5           &kp N6         &kp N7          &kp N8          &kp N9        &kp N0           &kp LEFT_ALT
-&kp LSHFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(RS(Z))     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT   &kp PAGE_UP  &kp LSHFT
-&kp LCTRL  &none      &none      &none      &none      &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp PAGE_DOWN    &kp RGUI
-                                 &kp LGUI   &kp SPACE  &none            &mkp LCLK      &mkp RCLK       &kp LGUI
+&kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5           &kp N6          &kp N7          &kp N8        &kp N9           &kp N0         &kp LEFT_ALT
+&kp LSHFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(RS(Z))    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp PAGE_UP    &kp LSHFT
+&kp LCTRL  &none      &none      &none      &none      &none            &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp PAGE_DOWN  &kp RGUI
+                                 &kp LGUI   &kp SPACE  &none            &mkp LCLK       &mkp RCLK       &kp LGUI
             >;
         };
 
@@ -112,7 +112,7 @@
             bindings = <
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
 &kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE
-&kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp DOUBLE_QUOTES  &kp PIPE
+&kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
                                           &kp LGUI      &kp COMMA  &kp DOT              &kp RET    &trans            &none
             >;
         };
@@ -120,10 +120,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&none  &kp N1                &kp N2              &kp N3               &kp N4                 &kp N5    &kp N6    &kp N7                &kp N8              &kp N9               &kp N0                 &none
-&none  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT              &none     &kp LEFT  &kp DOWN              &kp UP              &kp RIGHT            &caps_word             &kp LSHFT
-&none  &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(RIGHT_BRACKET)  &none  &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(RIGHT_BRACKET)   &none     &kp LGUI
-                                                 &kp LGUI             &kp SPACE              &none     &kp RET   &kp BACKSPACE         &kp LSHIFT
+&none  &kp N1                &kp N2              &kp N3               &kp N4                 &kp N5           &kp N6                &kp N7              &kp N8               &kp N9                 &kp N0      &none
+&none  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT              &kp LC(GRAVE)    &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT              &caps_word  &kp LSHFT
+&none  &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(RIGHT_BRACKET)  &kp LG(GRAVE)    &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(RIGHT_BRACKET)  &none       &kp LGUI
+                                                 &kp LGUI             &kp SPACE              &none            &kp RET               &kp BACKSPACE       &kp LSHIFT
             >;
         };
 
