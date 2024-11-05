@@ -66,9 +66,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q        &kp W       &kp E         &kp R             &kp T    &kp Y      &kp U            &kp I         &kp O       &kp P                &kp LEFT_ALT
-&kp LSHFT  &mt LCTRL A  &mt LALT S  &mt LGUI D    &mt LEFT_SHIFT F  &kp G    &kp H      &mt LSHIFT J     &mt LGUI K    &mt LALT L  &mt LCTRL SEMICOLON  &kp SINGLE_QUOTE
-&kp LCTRL  &kp Z        &kp X       &kp C         &kp V             &kp B    &kp N      &kp M            &kp COMMA     &kp DOT     &lt 5 SLASH          &kp RGUI
+&kp TAB    &kp Q        &kp W       &kp E         &kp R             &kp T    &kp Y      &kp U            &kp I         &kp O       &kp P                   &kp LEFT_ALT
+&kp LSHFT  &mt LCTRL A  &mt LALT S  &mt LGUI D    &mt LEFT_SHIFT F  &kp G    &kp H      &mt LSHIFT J     &mt LGUI K    &mt LALT L  &mt LCTRL SINGLE_QUOTE  &kp LSHIFT
+&kp LCTRL  &kp Z        &kp X       &kp C         &kp V             &kp B    &kp N      &kp M            &kp COMMA     &kp DOT     &lt 5 SLASH             &kp RGUI
                                     &mt LGUI ESC  &lt 4 SPACE       &mo 2    &lt 3 RET  &lt 1 BACKSPACE  &mt LGUI DEL
             >;
         };
@@ -83,10 +83,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2       &kp N3         &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8    &kp N9  &kp N0  &kp LEFT_ALT
-&kp LSHFT  &none   &none        &none          &none         &none     &home_tilde   &kp N4         &kp N5    &kp N6  &none   &kp LSHFT
-&kp LCTRL  &none   &kp PAGE_UP  &kp PAGE_DOWN  &none         &g_       &tilde_macro  &kp N1         &kp N2    &kp N3  &none   &kp RGUI
-                                &kp LGUI       &kp SPACE     &none     &kp RET       &kp BACKSPACE  &kp LGUI
+&kp TAB    &kp N1     &kp N2       &kp N3            &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8    &kp N9  &kp N0  &kp LEFT_ALT
+&kp LSHFT  &kp LCTRL  &kp LALT     &kp LEFT_COMMAND  &kp LSHIFT    &none     &home_tilde   &kp N4         &kp N5    &kp N6  &none   &kp LSHFT
+&kp LCTRL  &none      &kp PAGE_UP  &kp PAGE_DOWN     &none         &g_       &tilde_macro  &kp N1         &kp N2    &kp N3  &none   &kp RGUI
+                                   &kp LGUI          &kp SPACE     &none     &kp RET       &kp BACKSPACE  &kp LGUI
             >;
         };
 
@@ -111,7 +111,7 @@
 
             bindings = <
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
-&kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE
+&kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
 &kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
                                           &kp LGUI      &kp COMMA  &kp DOT              &kp RET    &trans            &none
             >;
