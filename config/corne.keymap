@@ -120,10 +120,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &none                 &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none                  &none            &none     &none          &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none       &none
-&kp LSHIFT  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT              &kp LC(GRAVE)    &kp LEFT  &kp DOWN       &kp UP              &kp RIGHT            &caps_word  &kp LSHFT
-&kp LCTRL   &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(RIGHT_BRACKET)  &kp LG(GRAVE)    &none     &kp HOME       &kp END             &none                &none       &kp LGUI
-                                                      &kp LGUI             &kp SPACE              &none            &kp RET   &kp BACKSPACE  &kp LGUI
+&kp TAB     &kp LC(GRAVE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none          &none            &none     &none          &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none       &none
+&kp LSHIFT  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT      &kp LC(GRAVE)    &kp LEFT  &kp DOWN       &kp UP              &kp RIGHT            &caps_word  &kp LSHFT
+&kp LCTRL   &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(ENTER)        &kp LS(ENTER)  &kp LC(ENTER)    &none     &kp HOME       &kp END             &none                &none       &kp LGUI
+                                                      &kp LGUI             &kp SPACE      &none            &kp RET   &kp BACKSPACE  &kp LGUI
             >;
         };
 
