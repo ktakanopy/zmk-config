@@ -65,7 +65,7 @@
           // Swapper for smart alt+tab
         alt_swapper: alt_swapper {
             compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER";
+            label = "ALTSWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
             ignored-key-positions = <21>;
