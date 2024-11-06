@@ -60,6 +60,16 @@
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <21>;
         };
+
+
+          // Swapper for smart alt+tab
+        alt_swapper: alt_swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <21>;
+        };
     };
 
     keymap {
@@ -129,7 +139,7 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LG(GRAVE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &mt LALT LA(TAB)  &swapper    &none       &kp LC(LEFT_BRACKET)  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)  &none      &none
+&kp TAB     &kp LG(GRAVE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &alt_swapper  &swapper    &none       &kp LC(LEFT_BRACKET)  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)  &none      &none
 &kp LSHIFT  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT         &kp LC(GRAVE)       &caps_word  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
 &kp LCTRL   &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &none                &none             &kp LG(F)           &none       &none                 &kp HOME            &kp END              &none      &kp LGUI
                                                       &kp LGUI             &kp SPACE         &none               &kp RET     &kp BACKSPACE         &kp LGUI
