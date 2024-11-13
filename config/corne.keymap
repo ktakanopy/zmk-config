@@ -52,6 +52,17 @@
             label = "G_";
         };
 
+        home_tilde_hidden: home_tilde_hidden {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_tap>,
+                <&kp TILDE &kp SPACE &kp SLASH &kp PERIOD>;
+
+            label = "HOME_TILDE_HIDDEN";
+        };
+
         // Swapper for smart alt+tab
 
         swapper: swapper {
@@ -94,7 +105,7 @@
 &kp TAB    &kp Q        &kp W       &kp E         &kp R             &kp T        &kp Y      &kp U            &kp I         &kp O       &kp P                   &kp LEFT_ALT
 &kp LSHFT  &mt LCTRL A  &mt LALT S  &mt LGUI D    &mt LEFT_SHIFT F  &kp G        &kp H      &mt LSHIFT J     &mt LGUI K    &mt LALT L  &mt LCTRL SINGLE_QUOTE  &kp LSHIFT
 &kp LCTRL  &kp Z        &kp X       &kp C         &kp V             &kp B        &kp N      &kp M            &kp COMMA     &kp DOT     &kp SLASH               &mo 5
-                                    &mt LGUI ESC  &lt 4 SPACE       &lt 2 TAB    &lt 3 RET  &lt 1 BACKSPACE  &mt LGUI DEL
+                                    &lt 1 ESCAPE  &lt 4 SPACE       &lt 2 TAB    &lt 3 RET  &lt 1 BACKSPACE  &mt LGUI DEL
             >;
         };
 
@@ -108,20 +119,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1     &kp N2    &kp N3            &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8    &kp N9  &kp N0  &kp LEFT_ALT
-&kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &kp LSHIFT    &none     &home_tilde   &kp N4         &kp N5    &kp N6  &none   &kp LSHFT
-&kp LCTRL  &none      &none     &none             &none         &g_       &tilde_macro  &kp N1         &kp N2    &kp N3  &none   &kp RGUI
-                                &kp LGUI          &kp SPACE     &none     &kp RET       &kp BACKSPACE  &kp LGUI
+&kp TAB    &kp N1     &kp N2    &kp N3            &kp NUMBER_4        &kp N5         &kp NUMBER_6  &kp N7         &kp N8    &kp N9  &kp N0  &kp LEFT_ALT
+&kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &kp LSHIFT          &home_tilde    &home_tilde   &kp N4         &kp N5    &kp N6  &kp N0  &kp LSHFT
+&kp LCTRL  &none      &none     &none             &home_tilde_hidden  &g_            &tilde_macro  &kp N1         &kp N2    &kp N3  &none   &kp RGUI
+                                &kp LGUI          &kp SPACE           &none          &kp RET       &kp BACKSPACE  &kp LGUI
             >;
         };
 
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &none      &none      &kp ENTER      &kp BACKSPACE  &kp DELETE       &none          &none           &none           &none         &none            &kp LEFT_ALT
-&kp LSHFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp LG(RS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp LSHFT
-&kp LCTRL  &none      &kp LC(A)  &kp LC(SPACE)  &kp LS(ENTER)  &kp LC(ENTER)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp RGUI
-                                 &kp LGUI       &kp SPACE      &none            &mkp LCLK      &mkp RCLK       &kp LGUI
+&kp TAB    &kp LC(SPACE)   &kp LC(A)             &kp ENTER  &kp BACKSPACE  &kp DELETE       &none          &none           &none           &none         &none            &kp LEFT_ALT
+&kp LSHFT  &kp LG(Z)       &kp LG(X)             &kp LG(C)  &kp LG(V)      &kp LG(RS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp LSHFT
+&kp LCTRL  &kp LG(LS(N5))  &kp LS(LG(NUMBER_4))  &kp CAPS   &kp LS(ENTER)  &kp LC(ENTER)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp RGUI
+                                                 &kp LGUI   &kp SPACE      &none            &mkp LCLK      &mkp RCLK       &kp LGUI
             >;
         };
 
