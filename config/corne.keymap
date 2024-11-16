@@ -25,7 +25,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tabb {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <15 38>;
+        };
+    };
 
     macros {
         tilde_macro: new_macro {
@@ -156,7 +163,7 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LG(GRAVE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &alt_swapper  &swapper         &none       &kp LC(LEFT_BRACKET)  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)  &none      &none
+&kp TAB     &kp LG(GRAVE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &alt_swapper  &swapper         &none       &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
 &kp LSHIFT  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT     &kp LC(GRAVE)    &caps_word  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
 &kp LCTRL   &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &none                &none         &kp LG(F)        &none       &none                 &kp HOME            &kp END              &none      &kp LGUI
                                                       &kp LGUI             &kp SPACE     &none            &kp RET     &kp BACKSPACE         &kp LGUI
