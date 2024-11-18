@@ -32,6 +32,11 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <15 38>;
         };
+
+        swap_same_app {
+            bindings = <&kp LG(GRAVE)>;
+            key-positions = <0 37>;
+        };
     };
 
     macros {
