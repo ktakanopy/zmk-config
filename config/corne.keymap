@@ -29,17 +29,17 @@
         compatible = "zmk,combos";
 
         tabb {
-            bindings = <&alt_swapper>;
+            bindings = <&swapper>;
             key-positions = <0 36>;
         };
 
         swap_same_app {
-            bindings = <&swapper>;
+            bindings = <&alt_swapper>;
             key-positions = <0 37>;
         };
 
         same_program {
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LG(GRAVE)>;
             key-positions = <1 37>;
         };
 
@@ -178,10 +178,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LC(SPACE)         &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &alt_swapper  &swapper         &none       &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
-&kp LSHIFT  &kp LCTRL             &kp LALT            &kp LGUI             &kp LSHFT     &kp LC(GRAVE)    &caps_word  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
-&kp LCTRL   &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &none                &none         &kp LG(F)        &none       &none                 &kp HOME            &kp END              &none      &kp LGUI
-                                                      &kp LGUI             &kp SPACE     &none            &kp RET     &kp BACKSPACE         &kp LGUI
+&kp TAB     &kp LC(SPACE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &alt_swapper      &swapper            &none       &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
+&kp LSHIFT  &kp LCTRL      &kp LALT            &kp LGUI             &kp LSHFT         &kp LC(GRAVE)       &caps_word  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
+&kp LCTRL   &kp LC(LGUI)   &kp LC(LALT)        &kp LS(LGUI)         &kp LC(LA(LGUI))  &kp LA(LS(LGUI))    &none       &none                 &kp HOME            &kp END              &none      &kp LGUI
+                                               &kp LGUI             &kp SPACE         &none               &kp RET     &kp BACKSPACE         &kp LGUI
             >;
         };
 
