@@ -141,10 +141,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1          &kp N2                &kp N3         &kp NUMBER_4   &kp N5           &kp NUMBER_6  &kp N7         &kp N8  &kp N9  &kp N0              &kp LEFT_ALT
-&kp LSHFT  &kp LG(Z)       &kp LG(X)             &kp LG(C)      &kp LG(V)      &kp LG(LS(Z))    &home_tilde   &kp N4         &kp N5  &kp N6  &home_tilde_hidden  &kp LSHFT
-&kp LCTRL  &kp LG(LS(N5))  &kp LG(LS(NUMBER_4))  &kp LC(ENTER)  &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro  &kp N1         &kp N2  &kp N3  &g_                 &kp RGUI
-                                                 &kp LGUI       &kp N0         &none            &kp RET       &kp BACKSPACE  &kp N0
+&kp TAB    &kp N1         &kp N2              &kp N3               &kp NUMBER_4   &kp N5           &kp NUMBER_6  &kp N7         &kp N8  &kp N9  &kp N0              &kp LEFT_ALT
+&kp LSHFT  &kp LG(Z)      &kp LG(X)           &kp LG(C)            &kp LG(V)      &kp LG(LS(Z))    &home_tilde   &kp N4         &kp N5  &kp N6  &home_tilde_hidden  &kp LSHFT
+&kp LCTRL  &kp LC(ENTER)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro  &kp N1         &kp N2  &kp N3  &g_                 &kp RGUI
+                                              &kp LALT             &kp LGUI       &none            &kp RET       &kp BACKSPACE  &kp N0
             >;
         };
 
@@ -178,10 +178,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LC(SPACE)   &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &none     &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
-&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp HOME  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &kp END   &kp END               &none               &kp HOME             &kp END    &none
-                                            &kp LALT        &kp LGUI          &kp SPACE           &none     &kp RET               &kp BACKSPACE
+&kp TAB     &kp LC(SPACE)   &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
+&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp HOME    &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
+&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &kp END     &none                 &none               &none                &none      &none
+                                            &kp LALT        &kp LGUI          &kp SPACE           &none       &kp RET               &kp BACKSPACE
             >;
         };
 
