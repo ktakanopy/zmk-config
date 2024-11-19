@@ -174,7 +174,6 @@
                                           &kp LGUI      &kp COMMA  &kp DOT              &kp RET    &trans            &none
             >;
         };
-&kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
         nav {
             display-name = "nav";
             bindings = <
