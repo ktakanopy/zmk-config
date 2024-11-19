@@ -177,9 +177,9 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LC(SPACE)  &mmv MOVE_UP  &kp LG(RIGHT_BRACE)  &alt_swapper      &swapper            &none       &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
-&kp LSHIFT   &kp PAGE_UP  &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LSHFT              &kp HOME  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
-&kp LCTRL   &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp LA(LS(LGUI))    &kp END       &none                 &kp HOME            &kp END              &none      &kp LGUI
+&kp TAB     &kp LC(SPACE)  &kp LG(RIGHT_BRACE)  &mmv MOVE_UP    &alt_swapper      &swapper            &none       &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
+&kp LSHIFT   &kp PAGE_UP  &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP              &kp HOME  &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
+&kp LCTRL    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT &kp PAGE_DOWN  &kp LA(LS(LGUI))    &kp END       &none                 &kp HOME            &kp END              &none      &kp LGUI
                                                &kp LGUI             &kp SPACE         &none               &kp RET     &kp BACKSPACE         &kp LGUI
             >;
         };
