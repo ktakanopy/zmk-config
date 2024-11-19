@@ -45,7 +45,7 @@
 
         control_grave {
             bindings = <&kp LC(GRAVE)>;
-            key-positions = <1 24>;
+            key-positions = <1 38>;
         };
     };
 
