@@ -142,7 +142,7 @@
 
             bindings = <
 &kp TAB    &kp N1         &kp N2              &kp N3               &kp NUMBER_4   &kp N5           &kp NUMBER_6  &kp N7         &kp N8  &kp N9  &kp N0              &kp LEFT_ALT
-&kp LSHFT  &none          &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp ENTER      &kp BSPC         &home_tilde   &kp N4         &kp N5  &kp N6  &home_tilde_hidden  &kp LSHFT
+&kp LSHFT  &kp LG(SPACE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp ENTER      &kp BSPC         &home_tilde   &kp N4         &kp N5  &kp N6  &home_tilde_hidden  &kp LSHFT
 &kp LCTRL  &kp LC(ENTER)  &kp LG(LEFT_BRACE)  &kp LC(ENTER)        &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro  &kp N1         &kp N2  &kp N3  &g_                 &kp RGUI
                                               &kp LALT             &kp LGUI       &none            &kp RET       &kp BACKSPACE  &kp N0
             >;
@@ -192,6 +192,15 @@
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE     &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &kp LSHFT
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none          &none         &none            &none       &kp LGUI
                                         &kp LGUI      &kp SPACE     &none      &kp RET     &kp BACKSPACE  &kp LGUI
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
