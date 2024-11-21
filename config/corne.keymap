@@ -132,7 +132,7 @@
         };
 
         num {
-            display-name = "num";
+            display-name = "num_and_macros";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -141,10 +141,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1         &kp N2              &kp N3               &kp NUMBER_4   &kp N5           &kp NUMBER_6  &kp N7         &kp N8  &kp N9  &kp N0              &kp LEFT_ALT
-&kp LSHFT  &kp LG(SPACE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp ENTER      &kp BSPC         &home_tilde   &kp N4         &kp N5  &kp N6  &home_tilde_hidden  &kp LSHFT
-&kp LCTRL  &kp LC(ENTER)  &kp LG(LEFT_BRACE)  &kp LC(ENTER)        &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro  &kp N1         &kp N2  &kp N3  &g_                 &kp RGUI
-                                              &kp LALT             &kp LGUI       &none            &kp RET       &kp BACKSPACE  &kp N0
+&kp TAB    &kp N1         &kp N2              &kp N3               &kp NUMBER_4   &kp N5           &kp NUMBER_6    &kp N7         &kp N8              &kp N9     &kp N0      &kp LEFT_ALT
+&kp LSHFT  &kp LG(SPACE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LC(SPACE)  &kp BSPC         &kp LEFT_ARROW  &kp DOWN       &kp UP              &kp RIGHT  &caps_word  &kp LSHFT
+&kp LCTRL  &kp LC(ENTER)  &kp LG(LEFT_BRACE)  &kp LC(ENTER)        &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro    &home_tilde    &home_tilde_hidden  &g_        &g_         &kp RGUI
+                                              &kp LALT             &kp LGUI       &none            &kp RET         &kp BACKSPACE  &kp N0
             >;
         };
 
@@ -168,9 +168,9 @@
         nav {
             display-name = "nav";
             bindings = <
-&kp TAB     &kp LC(SPACE)   &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
-&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp HOME    &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &kp END     &mkp LCLK             &mkp RCLK           &mkp MCLK            &none      &kp LCTRL
+&kp TAB     &kp LC(LALT)    &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none     &none
+&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp LEFT    &kp DOWN              &kp UP_ARROW        &kp RIGHT            &kp HOME  &kp LSHFT
+&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &none       &mkp LCLK             &mkp RCLK           &mkp MCLK            &kp END   &kp LCTRL
                                             &kp LALT        &kp LGUI          &kp SPACE           &none       &kp RET               &kp BACKSPACE
             >;
         };
@@ -181,7 +181,7 @@
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6     &none       &none          &none         &none            &none       &none
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE     &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &kp LSHFT
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none          &none         &none            &none       &kp LGUI
-                                        &kp LGUI      &kp SPACE     &none      &kp RET     &kp BACKSPACE  &kp LGUI
+                                        &kp LALT      &kp LGUI      &none      &kp RET     &kp BACKSPACE  &kp LGUI
             >;
         };
     };
