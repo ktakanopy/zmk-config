@@ -180,7 +180,7 @@
             bindings = <
 &kp TAB     &kp LC(SPACE)   &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp LC(LEFT_BRACKET)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &none      &none
 &kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp HOME    &kp LEFT              &kp DOWN            &kp UP               &kp RIGHT  &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &kp END     &none                 &none               &none                &none      &none
+&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &kp END     &mkp LCLK             &mkp RCLK           &mkp MCLK            &none      &kp LCTRL
                                             &kp LALT        &kp LGUI          &kp SPACE           &none       &kp RET               &kp BACKSPACE
             >;
         };
