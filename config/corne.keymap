@@ -30,12 +30,12 @@
 
         tabb {
             bindings = <&swapper>;
-            key-positions = <0 36>;
+            key-positions = <36 14>;
         };
 
         swap_same_app {
             bindings = <&alt_swapper>;
-            key-positions = <0 37>;
+            key-positions = <37 15>;
         };
 
         same_program {
