@@ -141,10 +141,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp N1         &kp N2             &kp N3                  &kp NUMBER_4            &kp N5          &kp NUMBER_6  &kp N7         &kp N8          &kp N9     &kp N0      &none
-&kp LEFT_CONTROL  &kp LC(SPACE)  &kp LC(LSHFT)      &kp LC(LGUI)            &kp LS(LGUI)            &kp LG(LALT)    &kp LEFT      &kp DOWN       &kp UP          &kp RIGHT  &caps_word  &none
-&kp LALT          &kp LC(LALT)   &kp LG(LA(LCTRL))  &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &none           &none         &none          &none           &none      &none       &none
-                                                    &kp LEFT_GUI            &none                   &none           &kp RET       &kp BACKSPACE  &kp LEFT_SHIFT
+&kp TAB           &kp N1        &kp N2             &kp N3                  &kp NUMBER_4            &kp N5            &kp NUMBER_6  &kp N7    &kp N8  &kp N9     &kp N0      &none
+&kp LEFT_CONTROL  &kp LA(LGUI)  &kp LC(LSHFT)      &kp LC(LGUI)            &kp LC(SPACE)           &kp LG(LALT)      &kp LEFT      &kp DOWN  &kp UP  &kp RIGHT  &caps_word  &none
+&kp LALT          &kp LC(LALT)  &kp LG(LA(LCTRL))  &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &kp LG(LSHIFT)    &none         &none     &none   &none      &none       &none
+                                                   &kp LEFT_GUI            &none                   &none             &none         &none     &none
             >;
         };
 
@@ -168,10 +168,10 @@
         nav {
             display-name = "nav2";
             bindings = <
-&kp TAB     &kp LC(LALT)    &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp HOME   &kp END        &none      &none     &none
-&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp LEFT    &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp HOME  &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &none       &mkp LCLK  &mkp RCLK      &mkp MCLK  &kp END   &kp LCTRL
-                                            &kp LALT        &kp LGUI          &kp SPACE           &none       &kp RET    &kp BACKSPACE
+&kp TAB     &trans          &trans          &mmv MOVE_UP    &trans           &trans           &caps_word  &none      &none         &trans     &trans  &trans
+&kp LSHIFT  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &kp LEFT    &kp DOWN   &kp UP_ARROW  &kp RIGHT  &none   &kp LSHFT
+&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans      &trans     &none         &none      &none   &kp LCTRL
+                                            &kp LALT        &kp LGUI         &kp SPACE        &mkp LCLK   &mkp RCLK  &mkp MCLK
             >;
         };
 
