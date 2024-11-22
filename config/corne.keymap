@@ -12,7 +12,8 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
 };
 
 &mmv {
@@ -24,30 +25,10 @@
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
+&lt { quick-tap-ms = <125>; };
+
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tabb {
-            bindings = <&swapper>;
-            key-positions = <38 15>;
-        };
-
-        swap_same_app {
-            bindings = <&alt_swapper>;
-            key-positions = <38 14>;
-        };
-
-        same_program {
-            bindings = <&kp LG(GRAVE)>;
-            key-positions = <1 37>;
-        };
-
-        control_grave {
-            bindings = <&kp LC(GRAVE)>;
-            key-positions = <1 38>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         tilde_macro: new_macro {
