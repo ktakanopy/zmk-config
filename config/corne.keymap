@@ -132,10 +132,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E            &kp R        &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P      &kp LEFT_ALT
-&kp LSHFT  &kp A  &kp S  &kp D            &kp F        &kp G        &kp H      &kp J            &kp K      &kp L    &kp APOS   &caps_word
-&kp LCTRL  &kp Z  &kp X  &kp C            &kp V        &kp B        &kp N      &kp M            &kp COMMA  &kp DOT  &kp SLASH  &kp LALT
-                         &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &lt 2 RET  &lt 1 BACKSPACE  &lt 4 DEL
+&kp TAB    &kp Q  &kp W  &kp E            &kp R        &kp T        &kp Y      &kp U            &kp I             &kp O    &kp P      &kp BACKSPACE
+&kp LALT   &kp A  &kp S  &kp D            &kp F        &kp G        &kp H      &kp J            &kp K             &kp L    &kp APOS   &caps_word
+&kp LCTRL  &kp Z  &kp X  &kp C            &kp V        &kp B        &kp N      &kp M            &kp COMMA         &kp DOT  &kp SLASH  &none
+                         &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &lt 2 RET  &lt 1 BACKSPACE  &lt 4 LEFT_SHIFT
             >;
         };
 
@@ -149,10 +149,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1         &kp N2              &kp N3                  &kp NUMBER_4            &kp N5          &kp NUMBER_6  &kp N7      &kp N8    &kp N9     &kp N0      &none
-&kp LSHFT  &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)     &kp LC(SPACE)           &swapper        &kp LEFT      &kp DOWN    &kp UP    &kp RIGHT  &caps_word  &none
-&kp LCTRL  &kp LC(LALT)   &kp LG(LA(LCTRL))   &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &alt_swapper    &none         &kp HOME    &kp END   &none      &none       &none
-                                              &kp LEFT_GUI            &none                   &none           &kp LALT      &kp LSHIFT  &kp LGUI
+&kp TAB    &kp N1         &kp N2              &kp N3                  &kp NUMBER_4            &kp N5          &kp NUMBER_6  &kp N7         &kp N8      &kp N9     &kp N0      &none
+&kp LALT   &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)     &kp LC(SPACE)           &swapper        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT  &caps_word  &none
+&kp LCTRL  &kp LC(LALT)   &kp LG(LA(LCTRL))   &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &alt_swapper    &none         &kp HOME       &kp END     &none      &none       &none
+                                              &kp LEFT_GUI            &none                   &none           &kp ENTER     &kp BACKSPACE  &kp DELETE
             >;
 
             label = "arrow";
@@ -169,9 +169,9 @@
 
             bindings = <
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
-&kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
+&kp LALT   &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
 &kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
-                                          &kp LALT      &kp LGUI   &kp DOT              &none      &trans            &none
+                                          &kp LSHIFT    &kp LGUI   &kp DOT              &none      &trans            &none
             >;
         };
 
@@ -179,7 +179,7 @@
             display-name = "mouse";
             bindings = <
 &kp TAB    &trans          &trans          &mmv MOVE_UP    &trans           &trans           &trans        &trans        &trans       &trans              &trans  &trans
-&kp LSHFT  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &tmux_visual  &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LSHFT
+&kp LALT   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &tmux_visual  &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LGUI
 &kp LCTRL  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans        &trans        &trans       &trans              &trans  &kp LALT
                                            &none           &none            &none            &mkp LCLK     &mkp RCLK     &mkp MCLK
             >;
