@@ -85,6 +85,14 @@
             label = "HOME_TILDE_HIDDEN";
         };
 
+        tmux_visual: tmux_visual {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp LC(SPACE) &kp LEFT_BRACKET>;
+
+            label = "TMUX_VISUAL";
+        };
+
         // Swapper for smart alt+tab
 
         swapper: swapper {
@@ -168,29 +176,29 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &trans          &trans          &mmv MOVE_UP    &none            &none            &none      &none         &none        &trans              &trans  &trans
-&kp LCTRL  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &none      &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LSHFT
-&kp LALT   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans     &trans        &none        &none               &none   &kp LCTRL
-                                           &kp LALT        &kp LGUI         &kp SPACE        &mkp LCLK  &mkp RCLK     &mkp MCLK
+&kp TAB    &trans          &trans          &mmv MOVE_UP    &trans           &trans           &trans     &trans        &trans       &trans              &trans  &trans
+&kp LCTRL  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &trans     &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LSHFT
+&kp LALT   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans     &trans        &trans       &trans              &trans  &kp LCTRL
+                                           &none           &none            &none            &mkp LCLK  &mkp RCLK     &mkp MCLK
             >;
         };
 
         fun {
             display-name = "fun";
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6     &none       &none       &none         &none            &none       &none
-&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none       &none         &none            &none       &none
-                                        &kp LGUI      &none         &none      &none       &none       &none
+&none      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5    &kp F6      &kp F7      &kp F8        &kp F9           &kp F10     &kp F11
+&kp LCTRL  &kp F11       &kp F12       &none         &none         &none     &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
+&kp LALT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none     &none       &none       &none         &none            &none       &none
+                                       &kp LGUI      &kp LSHIFT    &none     &none       &none       &none
             >;
         };
 
         onehand {
             bindings = <
-&kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LC(GRAVE)  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LS(RET)    &kp LC(RET)         &kp ENTER            &kp BSPC       &kp LG(RET)    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LALT   &trans         &trans              &trans               &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                              &trans               &trans         &trans         &trans  &trans  &trans
+&kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LC(GRAVE)  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LS(RET)    &swapper            &alt_swapper         &kp ENTER      &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LALT   &trans         &kp LC(ENTER)       &kp LG(ENTER)        &tmux_visual   &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans               &trans         &trans           &trans  &trans  &trans
             >;
 
             label = "onehand";
