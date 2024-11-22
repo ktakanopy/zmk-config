@@ -28,7 +28,24 @@
 &lt { quick-tap-ms = <125>; };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        cmd_space {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <3 4>;
+        };
+
+        cmd_shift {
+            bindings = <&kp LG(LSHIFT)>;
+            key-positions = <14 15>;
+        };
+
+        ctrl_opt {
+            bindings = <&kp LC(LALT)>;
+            key-positions = <13 15>;
+        };
+    };
 
     macros {
         tilde_macro: new_macro {
