@@ -124,10 +124,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E            &kp R           &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P      &kp LEFT_ALT
-&mt LSHFT ESC  &kp A  &kp S  &kp D            &kp F           &kp G        &kp H      &kp J            &kp K      &kp L    &kp APOS   &caps_word
-&kp LCTRL      &kp Z  &kp X  &kp C            &kp V           &kp B        &kp N      &kp M            &kp COMMA  &kp DOT  &kp SLASH  &mo 4
-                             &mt LGUI ESCAPE  &mt LGUI SPACE  &lt 3 TAB    &lt 2 RET  &lt 1 BACKSPACE  &lt 1 DEL
+&kp TAB        &kp Q  &kp W  &kp E            &kp R        &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P      &kp LEFT_ALT
+&mt LCTRL ESC  &kp A  &kp S  &kp D            &kp F        &kp G        &kp H      &kp J            &kp K      &kp L    &kp APOS   &caps_word
+&kp LALT       &kp Z  &kp X  &kp C            &kp V        &kp B        &kp N      &kp M            &kp COMMA  &kp DOT  &kp SLASH  &none
+                             &mt LGUI ESCAPE  &lt 5 SPACE  &lt 3 TAB    &lt 2 RET  &lt 1 BACKSPACE  &lt 4 DEL
             >;
         };
 
@@ -159,30 +159,41 @@
 
             bindings = <
 &kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
-&kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
-&kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
+&kp LCTRL  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
+&kp LALT   &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
                                           &kp LALT      &kp LGUI   &kp DOT              &kp RET    &trans            &none
             >;
         };
 
-        nav {
-            display-name = "nav2";
+        mouse {
+            display-name = "mouse";
             bindings = <
-&kp TAB     &trans          &trans          &mmv MOVE_UP    &trans           &trans           &caps_word  &none      &none         &trans     &trans  &trans
-&kp LSHIFT  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &kp LEFT    &kp DOWN   &kp UP_ARROW  &kp RIGHT  &none   &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans      &trans     &none         &none      &none   &kp LCTRL
-                                            &kp LALT        &kp LGUI         &kp SPACE        &mkp LCLK   &mkp RCLK  &mkp MCLK
+&kp TAB    &trans          &trans          &mmv MOVE_UP    &none            &none            &none      &none         &none        &trans              &trans  &trans
+&kp LCTRL  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &none      &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LSHFT
+&kp LALT   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans     &trans        &none        &none               &none   &kp LCTRL
+                                           &kp LALT        &kp LGUI         &kp SPACE        &mkp LCLK  &mkp RCLK     &mkp MCLK
             >;
         };
 
         fun {
             display-name = "fun";
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6     &none       &none          &none         &none            &none       &none
-&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE     &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &kp LSHFT
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none          &none         &none            &none       &kp LGUI
-                                        &kp LALT      &kp LGUI      &none      &kp RET     &kp BACKSPACE  &kp LGUI
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6     &none       &none       &none         &none            &none       &none
+&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none       &none         &none            &none       &none
+                                        &kp LGUI      &none         &none      &none       &none       &none
             >;
+        };
+
+        onehand {
+            bindings = <
+&kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LC(GRAVE)  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LS(RET)    &kp LC(RET)         &kp ENTER            &kp BSPC       &kp LG(RET)    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LALT   &trans         &trans              &trans               &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans               &trans         &trans         &trans  &trans  &trans
+            >;
+
+            label = "onehand";
         };
     };
 };
