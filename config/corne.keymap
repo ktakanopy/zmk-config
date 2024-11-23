@@ -179,10 +179,10 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &trans          &trans          &mmv MOVE_UP    &trans           &trans           &trans        &trans        &trans       &trans              &trans  &trans
-&kp LALT   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &tmux_visual  &tilde_macro  &home_tilde  &home_tilde_hidden  &g_     &kp LGUI
-&kp LCTRL  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &trans        &trans        &trans       &trans              &trans  &kp LALT
-                                           &none           &none            &none            &mkp LCLK     &mkp RCLK     &mkp MCLK
+&kp TAB    &trans          &trans          &mmv MOVE_UP    &trans           &trans           &trans          &trans          &mmv MOVE_UP     &trans              &trans  &trans
+&kp LALT   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_UP      &kp PAGE_UP     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &g_     &kp LGUI
+&kp LCTRL  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &kp PAGE_DOWN    &kp PAGE_DOWN   &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP        &msc SCRL_RIGHT     &kp LALT
+                                           &none           &none            &none            &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
         };
 
