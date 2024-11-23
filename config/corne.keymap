@@ -41,19 +41,19 @@
         cmd_shift {
             bindings = <&kt LG(LSHIFT)>;
             key-positions = <14 15>;
-            layers = <1>;
+            layers = <1 2 3 0 4>;
         };
 
         ctrl_opt {
             bindings = <&kt LC(LALT)>;
             key-positions = <16 15>;
-            layers = <1>;
+            layers = <1 2 0 3 4>;
         };
 
         ctrl_cmd {
             bindings = <&kt LC(LGUI)>;
             key-positions = <15 13>;
-            layers = <1>;
+            layers = <1 2 0 3 4>;
         };
     };
 
