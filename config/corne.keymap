@@ -203,7 +203,7 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &trans             &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &trans          &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp TAB    &trans             &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LS(ENTER)   &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
 &kp LALT   &tilde_macro       &home_tilde         &home_tilde_hidden   &g_             &tmux_visual     &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
 &kp LCTRL  &kp LA(BACKSPACE)  &kp BSPC            &kp ENTER            &kp LA(DELETE)  &kp LC(ENTER)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                                   &none                &none           &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
