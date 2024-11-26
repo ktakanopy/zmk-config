@@ -188,10 +188,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1          &kp N2             &kp N3                  &kp NUMBER_4            &kp N5           &kp NUMBER_6  &kp N7    &kp N8    &kp N9     &kp N0      &kp BACKSPACE
-&kp LSHIFT  &kp LG(GRAVE)   &kp LC(GRAVE)      &kp LG(SPACE)           &kp LC(SPACE)           &swapper         &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &kp LSHIFT
-&kp LCTRL   &kp LG(LSHIFT)  &kp LG(LA(LCTRL))  &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &swapper_back    &none         &kp HOME  &kp END   &none      &none       &kp LALT
-                                               &kp LEFT_GUI            &none                   &none            &none         &kp RET   &kp LALT
+&kp TAB     &kp N1          &kp N2              &kp N3                  &kp NUMBER_4            &kp N5           &kp NUMBER_6  &kp N7    &kp N8    &kp N9     &kp N0      &kp BACKSPACE
+&kp LSHIFT  &kp LG(GRAVE)   &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)     &kp LC(SPACE)           &swapper         &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &kp LSHIFT
+&kp LCTRL   &kp LG(LSHIFT)  &kp LG(LA(LCTRL))   &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))  &swapper_back    &none         &kp HOME  &kp END   &none      &none       &kp LALT
+                                                &kp LEFT_GUI            &none                   &none            &none         &kp RET   &kp LALT
             >;
 
             label = "arrow";
@@ -217,9 +217,9 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &trans             &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LS(ENTER)   &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp TAB    &kp LG(SPACE)      &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LS(ENTER)   &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
 &kp LALT   &tilde_macro       &home_tilde         &home_tilde_hidden   &g_             &tmux_visual     &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &kp LA(BACKSPACE)  &kp BSPC            &kp ENTER            &kp LA(DELETE)  &kp LC(ENTER)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+&kp LCTRL  &kp LA(BACKSPACE)  &kp BSPC            &kp ENTER            &kp LA(DELETE)  &kp LC(GRAVE)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                                   &none                &none           &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
