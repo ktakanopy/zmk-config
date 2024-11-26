@@ -79,6 +79,13 @@
             layers = <1 2 3 0 4>;
             timeout-ms = <50>;
         };
+
+        fun_trigger {
+            bindings = <&tog 4>;
+            key-positions = <40 41>;
+            timeout-ms = <50>;
+            layers = <1 2 3 0 4>;
+        };
     };
 
     macros {
@@ -140,21 +147,12 @@
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER_BACK";
             #binding-cells = <0>;
-        bindings = <&kt LGUI>, <&kp LSHIFT>, <&kp TAB>, <&kt LGUI>;
+            bindings = <&kt LGUI>, <&kp LSHIFT>, <&kp TAB>, <&kt LGUI>;
 
             ignored-key-positions = <21>;
         };
 
         // Swapper for smart alt+tab
-
-        alt_swapper: alt_swapper {
-            compatible = "zmk,behavior-tri-state";
-            label = "ALTSWAPPER";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-
-            ignored-key-positions = <21>;
-        };
     };
 
     behaviors {
