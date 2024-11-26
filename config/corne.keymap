@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER_BACK";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp LSHIFT>, <&kp TAB>, <&kt LGUI>;
+            bindings = <&kt LGUI>, <&kp LS(TAB)>, <&kt LGUI>;
 
             ignored-key-positions = <21>;
         };
