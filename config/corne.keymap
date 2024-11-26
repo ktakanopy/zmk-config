@@ -31,46 +31,53 @@
     combos {
         compatible = "zmk,combos";
 
-        cmd_space {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
         cmd_shift {
             bindings = <&sk LG(LSHIFT)>;
             key-positions = <15 16>;
             layers = <1 2 3 0 4>;
+            timeout-ms = <50>;
         };
 
         ctrl_opt {
             bindings = <&sk LC(LALT)>;
             key-positions = <13 14>;
             layers = <1 2 0 3 4>;
+            timeout-ms = <50>;
         };
 
         ctrl_cmd {
             bindings = <&sk LC(LGUI)>;
             key-positions = <15 13>;
             layers = <1 2 0 3 4>;
+            timeout-ms = <50>;
         };
 
         option_shift {
             bindings = <&sk LA(LSHIFT)>;
             key-positions = <14 16>;
             layers = <1 2 0 3 4>;
+            timeout-ms = <50>;
         };
 
         option_cmd {
             bindings = <&sk LA(LGUI)>;
             key-positions = <15 14>;
             layers = <1 2 0 3 4>;
+            timeout-ms = <50>;
         };
 
         ctrl_shift {
             bindings = <&sk LC(LSHIFT)>;
             key-positions = <13 16>;
             layers = <1 2 0 3 4>;
+            timeout-ms = <50>;
+        };
+
+        cmd_shift2 {
+            bindings = <&sk LG(LSHIFT)>;
+            key-positions = <20 19>;
+            layers = <1 2 3 0 4>;
+            timeout-ms = <50>;
         };
     };
 
