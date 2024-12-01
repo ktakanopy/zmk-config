@@ -140,7 +140,7 @@
 
             bindings = <
 &kp TAB     &kp N1                   &kp N2                   &kp N3                    &kp NUMBER_4            &kp N5           &kp NUMBER_6  &kp N7    &kp N8    &kp N9     &kp N0      &kp BACKSPACE
-&kp LSHIFT  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LGUI LS(RIGHT_BRACE)  &mt LSHIFT A            &swapper_back    &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &kp LSHIFT
+&kp LSHIFT  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LGUI LS(RIGHT_BRACE)  &mt LSHIFT &swapper            &swapper_back    &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT  &caps_word  &kp LSHIFT
 &kp LCTRL   &kp LG(LSHIFT)           &kp LG(LA(LCTRL))        &kp LA(LG(LEFT_SHIFT))    &kp LA(LC(LG(LSHIFT)))  &swapper_back    &none         &kp HOME  &kp END   &none      &none       &kp LALT
                                                               &kp LEFT_GUI              &none                   &none            &none         &kp RET   &kp LALT
             >;
