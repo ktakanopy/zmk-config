@@ -129,7 +129,7 @@
             bindings = <
 &kp TAB               &kp Q        &kp W       &kp E            &kp R         &kp T    &kp Y  &kp U             &kp I            &kp O       &kp P           &kp BACKSPACE
 &mt LSHIFT LC(SPACE)  &mt LCTRL A  &mt LALT S  &mt LCMD D       &mt LSHIFT F  &kp G    &kp H  &mt LEFT_SHIFT J  &mt LGUI K       &mt LALT L  &mt LCTRL APOS  &sk LSHIFT
-&mt LCTRL LC(SPACE)   &kp Z        &kp X       &kp C            &kp V         &kp B    &kp N  &kp M             &kp COMMA        &kp DOT     &kp SLASH       &mt LALT LC(SPACE)
+&kp LCTRL             &kp Z        &kp X       &kp C            &kp V         &kp B    &kp N  &kp M             &kp COMMA        &kp DOT     &kp SLASH       &kp LALT
                                                &mt LGUI ESCAPE  &lt 1 SPACE   &mo 3    &mo 2  &lt 1 RET         &mt LALT DELETE
             >;
         };
@@ -144,10 +144,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB               &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5                    &kp NUMBER_6   &kp N7    &kp N8    &kp N9   &kp N0     &kp BACKSPACE
-&mt LSHIFT LC(SPACE)  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET                   &swapper_back  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &caps_word
-&kp LSHIFT            &kp LCTRL                &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp LS(TAB)         &kp LA(LC(LG(LSHIFT)))    &swapper_back  &none     &kp HOME  &kp END  &none      &none
-                                                                        &kp LALT                      &kp LEFT_GUI        &none                     &none          &kp RET   &kp DEL
+&kp TAB        &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6  &kp N7    &kp N8    &kp N9   &kp N0     &kp BACKSPACE
+&kp LC(SPACE)  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET        &trans        &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &caps_word
+&kp LCTRL      &kp LC(SPACE)            &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp LS(TAB)         &kp LS(TAB)    &trans        &none     &kp HOME  &kp END  &none      &none
+                                                                 &kp LALT                      &kp LEFT_GUI        &none          &none         &kp RET   &kp DEL
             >;
 
             label = "arrow";
