@@ -145,10 +145,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6    &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&kp LC(SPACE)  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL      &kt LC(SPACE)            &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp TAB             &kp LS(TAB)    &trans          &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
-                                                                 &kp LALT                      &kp LEFT_GUI        &none          &none           &kp RET         &kp DEL
+&kp TAB        &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6          &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&kp LC(SPACE)  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET        &kp LEFT_ARROW        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL      &kt LC(SPACE)            &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp TAB             &kp LS(TAB)    &kp LC(LEFT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                                 &kp LALT                      &kp LEFT_GUI        &none          &none                 &kp RET         &kp DEL
             >;
 
             label = "arrow";
@@ -164,10 +164,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS    &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
-&kp RSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL   &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
-&kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS    &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
-                                          &kp LGUI      &kp PERIOD  &kp COMMA            &none      &trans            &none
+&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &kp DOUBLE_QUOTES    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &kp LEFT_ALT
+&kp RSHFT  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT          &kp MINUS  &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp LSHIFT
+&kp LCTRL  &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH        &kp SLASH  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
+                                                      &kp LGUI        &kp PERIOD            &kp COMMA            &none      &trans                   &none
             >;
         };
 
