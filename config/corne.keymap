@@ -144,10 +144,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1                   &kp N2                   &kp N3                    &kp NUMBER_4            &kp N5                    &kp NUMBER_6   &kp N7    &kp N8    &kp N9   &kp N0     &kp BACKSPACE
-&kp LSHIFT  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LGUI LS(RIGHT_BRACE)  &mt LSHIFT RETURN       &swapper                  &swapper_back  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &caps_word
-&kp LSHIFT  &kp LCTRL                &kp LG(LSHIFT)           &kp LG(LA(LCTRL))         &kp LA(LG(LEFT_SHIFT))  &kp LA(LC(LG(LSHIFT)))    &swapper_back  &none     &kp HOME  &kp END  &none      &none
-                                                              &kp LALT                  &kp LEFT_GUI            &none                     &none          &none     &kp RET
+&kp TAB     &kp N1                   &kp N2                   &kp N3                    &kp NUMBER_4         &kp N5                    &kp NUMBER_6   &kp N7    &kp N8    &kp N9   &kp N0     &kp BACKSPACE
+&kp LSHIFT  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LGUI LS(RIGHT_BRACE)  &mt LSHIFT LG(TAB)   &kp RET                   &swapper_back  &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &caps_word
+&kp LSHIFT  &kp LCTRL                &kp LG(LSHIFT)           &kp LS(LEFT_BRACE)        &kp LS(RIGHT_BRACE)  &kp LA(LC(LG(LSHIFT)))    &swapper_back  &none     &kp HOME  &kp END  &none      &none
+                                                              &kp LALT                  &kp LEFT_GUI         &none                     &none          &none     &kp RET
             >;
 
             label = "arrow";
@@ -173,10 +173,10 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp LG(SPACE)      &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LS(ENTER)   &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
-&kp LALT   &tilde_macro       &home_tilde         &home_tilde_hidden   &g_             &tmux_visual     &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &kp LA(BACKSPACE)  &kp BSPC            &kp ENTER            &kp LA(DELETE)  &kp LC(GRAVE)    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
-                                                  &none                &none           &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
+&kp TAB    &kp LG(SPACE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LS(ENTER)  &kp LG(ENTER)    &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp LALT   &kp LG(Z)           &kp LG(X)           &kp LG(C)            &kp LG(V)      &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
+&kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_            &tmux_visual     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+                                                   &none                &none          &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
 
