@@ -12,9 +12,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mt {
-    flavor = "tap-unless-interrupted";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <100>;
+    flavor = "balanced";
+    quick-tap-ms = <0>;
 };
 
 &mmv {
