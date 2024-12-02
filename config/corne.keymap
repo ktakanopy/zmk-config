@@ -26,8 +26,9 @@
 };
 
 &lt {
-    quick-tap-ms = <100>;
-    flavor = "tap-unless-interrupted";
+    quick-tap-ms = <0>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
 };
 
 / {
