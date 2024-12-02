@@ -12,9 +12,9 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mt {
-    flavor = "tap-preferred";
+    flavor = "tap-unless-interrupted";
     tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    quick-tap-ms = <100>;
 };
 
 &mmv {
@@ -26,7 +26,10 @@
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
-&lt { quick-tap-ms = <125>; };
+&lt {
+    quick-tap-ms = <100>;
+    flavor = "tap-unless-interrupted";
+};
 
 / {
     combos {
@@ -145,10 +148,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6          &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&kp ESCAPE  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET        &kp LEFT_ARROW        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL   &kt LC(SPACE)            &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp TAB             &kp LS(TAB)    &kp LC(LEFT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
-                                                              &mt LALT LC(SPACE)            &kp LEFT_GUI        &none          &none                 &kp RET         &kp DEL
+&kp TAB     &kp N1                   &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&kp ESCAPE  &mt LG(LCTRL) LG(GRAVE)  &mt LALT LG(LEFT_BRACE)  &mt LG(LGUI) LG(RIGHT_BRACE)  &mt LSHIFT LG(TAB)  &kp RET        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL   &kt LC(SPACE)            &kp LS(LEFT_BRACE)       &kp LS(RIGHT_BRACE)           &kp TAB             &kp LS(TAB)    &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                              &mt LALT LC(SPACE)            &kp LEFT_GUI        &none          &none                  &kp RET         &kp DEL
             >;
 
             label = "arrow";
