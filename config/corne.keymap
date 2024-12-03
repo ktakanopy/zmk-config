@@ -148,10 +148,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&kp ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LS(RET)  &kp RET        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL   &kt HASH             &kp DOLLAR               &g_                           &kp TAB             &kp LS(TAB)    &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
-                                                          &mt LALT LC(SPACE)            &kp LEFT_GUI        &none          &none                  &kp RET         &kp DEL
+&kp TAB                &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LS(RET)  &kp RET        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL              &kt HASH             &kp DOLLAR               &g_                           &kp TAB             &kp LS(TAB)    &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                                     &mt LGUI LC(SPACE)            &kp LALT            &none          &none                  &kp RET         &kp DEL
             >;
 
             label = "arrow";
