@@ -177,7 +177,7 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &none            &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &none            &trans         &tmux_visual    &mmv MOVE_UP    &trans           &trans           &trans
 &kp LALT   &kp LG(Z)           &kp LG(X)           &kp LG(C)            &kp LG(V)    &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
 &kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_          &tmux_visual     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                                    &none                &none        &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
