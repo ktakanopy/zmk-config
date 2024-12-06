@@ -133,7 +133,7 @@
             bindings = <
 &kp TAB            &kp Q        &kp W       &kp E               &kp R         &kp T        &kp Y  &kp U             &kp I            &kp O       &kp P                   &kp BACKSPACE
 &mt LSHIFT ESCAPE  &mt LCTRL A  &mt LALT S  &mt LCMD D          &mt LSHIFT F  &kp G        &kp H  &mt LEFT_SHIFT J  &mt LGUI K       &mt LALT L  &mt LCTRL SINGLE_QUOTE  &sk LEFT_SHIFT
-&kp LCTRL          &kp Z        &kp X       &kp C               &kp V         &kp B        &kp N  &kp M             &kp COMMA        &kp DOT     &kp SLASH               &sk SEMICOLON
+&kp LCTRL          &kp Z        &kp X       &kp C               &kp V         &kp B        &kp N  &kp M             &kp COMMA        &kp DOT     &kp SLASH               &kp SEMICOLON
                                             &mt LGUI LC(SPACE)  &lt 1 SPACE   &lt 3 TAB    &mo 2  &lt 1 RET         &mt LALT DELETE
             >;
         };
@@ -148,10 +148,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB                &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5         &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LS(RET)  &kp RET        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL              &kt HASH             &kp DOLLAR               &g_                           &kp TAB             &kp LS(TAB)    &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
-                                                                     &mt LGUI LC(SPACE)            &kp LALT            &none          &none                  &kp RET         &kp DEL
+&kp TAB                &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5     &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LS(RET)  &kp RET    &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL              &kt HASH             &kp DOLLAR               &g_                           &kp TAB             &g_        &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                                     &mt LGUI LC(SPACE)            &kp LALT            &none      &none                  &kp RET         &kp DEL
             >;
 
             label = "arrow";
@@ -167,7 +167,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &kp DOUBLE_QUOTES    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &kp LEFT_ALT
+&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &kp DOUBLE_QUOTES    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
 &kp RSHFT  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT          &kp MINUS  &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp LSHIFT
 &kp LCTRL  &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH        &kp SLASH  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
                                                       &kp LGUI        &kp PERIOD            &kp COMMA            &none      &trans                   &none
@@ -177,9 +177,9 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &none            &trans         &tmux_visual    &mmv MOVE_UP    &trans           &trans           &trans
+&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &none            &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
 &kp LALT   &kp LG(Z)           &kp LG(X)           &kp LG(C)            &kp LG(V)    &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_          &tmux_visual     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+&kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_          &tilde_macro     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                                    &none                &none        &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
