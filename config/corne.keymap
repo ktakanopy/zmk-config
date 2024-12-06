@@ -46,6 +46,16 @@
             bindings = <&swapper>;
             key-positions = <16 38>;
         };
+
+        ctrl_space {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <2 3>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <9 8>;
+        };
     };
 
     macros {
@@ -90,6 +100,14 @@
             bindings = <&none>, <&macro_tap>, <&kp LC(SPACE) &kp LEFT_BRACKET>;
 
             label = "TMUX_VISUAL";
+        };
+
+        quotes_space: quotes_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp DOUBLE_QUOTES &kp SPACE>;
+
+            label = "QUOTES_SPACE";
         };
 
         // Swapper for smart alt+tab
@@ -148,10 +166,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB                &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4        &kp N5     &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
-&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LS(RET)  &kp RET    &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL              &kt HASH             &kp DOLLAR               &g_                           &kp TAB             &g_        &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
-                                                                     &mt LGUI LC(SPACE)            &kp LALT            &none      &none                  &kp RET         &kp DEL
+&kp TAB                &kp N1               &kp N2                   &kp N3                        &kp NUMBER_4          &kp N5         &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(GRAVE)  &mt LALT LS(LEFT_BRACE)  &mt LG(LGUI) LS(RIGHT_BRACE)  &mt LSHIFT LC(SPACE)  &kp LS(RET)    &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL              &kt HASH             &kp DOLLAR               &kp SEMI                      &g_                   &g_            &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                                     &mt LGUI LC(SPACE)            &kp LALT              &none          &none                  &kp RET         &kp DEL
             >;
 
             label = "arrow";
@@ -167,10 +185,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &kp DOUBLE_QUOTES    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
-&kp RSHFT  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT          &kp MINUS  &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp LSHIFT
-&kp LCTRL  &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH        &kp SLASH  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
-                                                      &kp LGUI        &kp PERIOD            &kp COMMA            &none      &trans                   &none
+&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &quotes_space    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
+&kp RSHFT  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT      &kp MINUS  &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp LSHIFT
+&kp LCTRL  &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH    &kp SLASH  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
+                                                      &kp LGUI        &kp PERIOD            &kp COMMA        &none      &trans                   &none
             >;
         };
 
