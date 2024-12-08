@@ -55,7 +55,7 @@
         };
 
         colon {
-            bindings = <&kp COLON>;
+            bindings = <&sk LEFT_SHIFT>;
             key-positions = <9 8>;
         };
     };
@@ -187,10 +187,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &quotes_space    &kp CARET  &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
-&kp RSHFT  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT      &kp MINUS  &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp LSHIFT
-&kp LCTRL  &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH    &kp SLASH  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
-                                                      &kp LGUI        &kp PERIOD            &kp COMMA        &none      &trans                   &none
+&kp PIPE       &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &quotes_space    &kp CARET     &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
+&kp LESS_THAN  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT      &kp MINUS     &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp GREATER_THAN
+&kp LCTRL      &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH    &tilde_macro  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
+                                                          &kp LGUI        &kp PERIOD            &kp COMMA        &none         &trans                   &none
             >;
         };
 
