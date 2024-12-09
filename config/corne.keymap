@@ -28,7 +28,7 @@
 &lt {
     quick-tap-ms = <0>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -57,6 +57,7 @@
         colon {
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <9 8>;
+            layers = <0>;
         };
     };
 
