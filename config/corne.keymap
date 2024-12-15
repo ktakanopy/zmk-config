@@ -34,7 +34,7 @@
         compatible = "zmk,combos";
 
         fun_trigger {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <40 41 39>;
             timeout-ms = <50>;
             layers = <1 2 3 0 4>;
@@ -44,6 +44,13 @@
             bindings = <&swapper>;
             key-positions = <16 38>;
             layers = <0>;
+        };
+
+        onehand {
+            bindings = <&tog 4>;
+            key-positions = <38 37 36>;
+            timeout-ms = <50>;
+            layers = <1 2 3 0 4>;
         };
     };
 
