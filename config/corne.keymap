@@ -111,14 +111,6 @@
             ignored-key-positions = <21>;
         };
 
-        swapper_back: swapper_back {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER_BACK";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp LS(TAB)>, <&kt LGUI>;
-
-            ignored-key-positions = <21>;
-        };
 
         // Swapper for smart alt+tab
     };
