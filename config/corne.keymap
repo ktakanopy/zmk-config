@@ -147,6 +147,8 @@
 &sk LALT   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA        &kp DOT  &kp FSLH          &sl 3
                          &sk LGUI  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &sk RIGHT_SHIFT
             >;
+
+            label = "base";
         };
 
         lower_layer {
@@ -156,6 +158,8 @@
 &none    &kp PAGE_DOWN  &none          &none          &none          &msc SCRL_UP      &mkp LCLK      &kp HOME  &kp END       &mkp RCLK  &kp K_APP   &trans
                                        &trans         &trans         &trans            &kp BACKSPACE  &trans    &kp COLON
             >;
+
+            label = "lower";
         };
 
         raise_layer {
@@ -165,6 +169,8 @@
 &trans     &g_              &kp MINUS             &kp PLUS          &kp EQUAL       &kp COLON               &kp SEMICOLON  &kp QUESTION     &quotes_space      &single_quote_space    &none             &trans
                                                   &sk LGUI          &trans          &none                   &trans         &trans           &trans
             >;
+
+            label = "raise";
         };
 
         function_layer {
@@ -174,6 +180,8 @@
 &trans  &kp CAPS  &trans   &trans  &trans  &trans      &trans         &trans        &bt BT_DISC 2  &trans  &tog 1      &kp PRINTSCREEN
                            &trans  &trans  &kp SEMI    &kp BACKSPACE  &trans        &trans
             >;
+
+            label = "fun";
         };
 
         onehand {
@@ -183,6 +191,8 @@
 &trans  &kp SPACE  &kp LS(ENTER)       &kp LG(ENTER)        &kp ENTER     &kp BSPC         &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
                                        &trans               &trans        &trans           &trans         &mkp LCLK       &mkp RCLK
             >;
+
+            label = "1_hand";
         };
     };
 };
