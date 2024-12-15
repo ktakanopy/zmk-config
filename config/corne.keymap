@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &mt {
     flavor = "balanced";
@@ -51,6 +52,11 @@
             key-positions = <38 37 36>;
             timeout-ms = <50>;
             layers = <1 2 3 0 4>;
+        };
+
+        jkesc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
         };
     };
 
@@ -164,10 +170,10 @@
 
         onehand {
             bindings = <
-&trans  &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &tmux_visual  &trans            &trans         &trans          &mmv MOVE_UP    &trans   &trans  &trans
-&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)        &kp LG(V)     &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &trans  &trans
-&trans  &kp space     &kp LS(ENTER)   &kp LG(ENTER)    &kp ENTER     &kp BSPC         &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT   &trans  &trans
-                                   &trans           &trans        &trans           &mkp LCLK      &mkp RCLK       &mkp MCLK
+&trans  &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE  &tmux_visual  &trans           &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&trans  &kp LG(Z)  &kp LG(X)       &kp LG(C)        &kp LG(V)     &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp space  &kp LS(ENTER)   &kp LG(ENTER)    &kp ENTER     &kp BSPC         &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
+                                   &trans           &trans        &trans           &trans         &mkp LCLK       &mkp RCLK
             >;
         };
     };
