@@ -115,7 +115,7 @@
         single_quote_space: single_quote_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_tap>, <&kp DOUBLE_QUOTES &kp SPACE>;
+            bindings = <&none>, <&macro_tap>, <&kp SINGLE_QUOTE &kp SPACE>;
 
             label = "SINGLE_QUOTE_SPACE";
         };
@@ -153,10 +153,10 @@
 
         lower_layer {
             bindings = <
-&kp TAB  &kp N1         &kp N2         &kp N3         &kp N4         &kp N5            &kp N6         &kp N7    &kp N8        &kp N9     &kp N0      &kp DELETE
-&none    &kp PAGE_UP    &kp LS(ENTER)  &kp LG(ENTER)  &sk LC(SPACE)  &msc SCRL_DOWN    &kp LEFT       &kp DOWN  &kp UP_ARROW  &kp RIGHT  &caps_word  &trans
-&none    &kp PAGE_DOWN  &none          &none          &none          &msc SCRL_UP      &mkp LCLK      &kp HOME  &kp END       &mkp RCLK  &kp K_APP   &trans
-                                       &trans         &trans         &trans            &kp BACKSPACE  &trans    &kp COLON
+&kp TAB  &kp N1         &kp N2         &kp N3         &kp N4         &kp N5            &kp N6     &kp N7          &kp N8        &kp N9     &kp N0      &kp DELETE
+&none    &kp PAGE_UP    &kp LS(ENTER)  &kp LG(ENTER)  &sk LC(SPACE)  &msc SCRL_DOWN    &kp LEFT   &kp DOWN        &kp UP_ARROW  &kp RIGHT  &caps_word  &trans
+&none    &kp PAGE_DOWN  &none          &none          &none          &msc SCRL_UP      &mkp LCLK  &kp HOME        &kp END       &mkp RCLK  &kp K_APP   &trans
+                                       &trans         &trans         &trans            &kp LGUI   &kp LEFT_SHIFT  &kp LS(G)
             >;
 
             label = "lower";
@@ -164,9 +164,9 @@
 
         raise_layer {
             bindings = <
-&trans     &kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR      &kp PERCENT             &kp CARET      &kp AMPERSAND    &kp ASTERISK       &none                  &none             &trans
-&kp UNDER  &kp LESS_THAN    &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp NON_US_BACKSLASH    &kp SLASH      &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &tilde_macro
-&trans     &g_              &kp MINUS             &kp PLUS          &kp EQUAL       &kp COLON               &kp SEMICOLON  &kp QUESTION     &quotes_space      &single_quote_space    &none             &trans
+&kp TAB    &kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR      &kp PERCENT             &kp CARET      &kp AMPERSAND    &kp ASTERISK       &kp UNDER              &kp MINUS         &trans
+&kp LCTRL  &kp LESS_THAN    &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp NON_US_BACKSLASH    &kp SLASH      &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &tilde_macro
+&kp LALT   &g_              &kp MINUS             &kp PLUS          &kp EQUAL       &kp COLON               &kp SEMICOLON  &kp QUESTION     &quotes_space      &single_quote_space    &none             &trans
                                                   &sk LGUI          &trans          &none                   &trans         &trans           &trans
             >;
 
