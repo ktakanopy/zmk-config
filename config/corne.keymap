@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <250>;
+    flavor = "balanced";
+    quick-tap-ms = <0>;
 };
 
 &mmv {
@@ -24,28 +24,27 @@
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
+&lt {
+    quick-tap-ms = <0>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
 
-        tabb {
+        fun_trigger {
+            bindings = <&tog 4>;
+            key-positions = <40 41 39>;
+            timeout-ms = <50>;
+            layers = <1 2 3 0 4>;
+        };
+
+        swapper {
             bindings = <&swapper>;
-            key-positions = <38 15>;
-        };
-
-        swap_same_app {
-            bindings = <&alt_swapper>;
-            key-positions = <38 14>;
-        };
-
-        same_program {
-            bindings = <&kp LG(GRAVE)>;
-            key-positions = <1 37>;
-        };
-
-        control_grave {
-            bindings = <&kp LC(GRAVE)>;
-            key-positions = <1 38>;
+            key-positions = <16 38>;
+            layers = <0>;
         };
     };
 
@@ -85,6 +84,22 @@
             label = "HOME_TILDE_HIDDEN";
         };
 
+        tmux_visual: tmux_visual {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp LC(SPACE) &kp LEFT_BRACKET>;
+
+            label = "TMUX_VISUAL";
+        };
+
+        quotes_space: quotes_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp DOUBLE_QUOTES &kp SPACE>;
+
+            label = "QUOTES_SPACE";
+        };
+
         // Swapper for smart alt+tab
 
         swapper: swapper {
@@ -96,25 +111,8 @@
             ignored-key-positions = <21>;
         };
 
-        swapper_back: swapper_back {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER_BACK";
-            #binding-cells = <0>;
-        bindings = <&kt LGUI>, <&kp LSHIFT>, <&kp TAB>, <&kt LGUI>;
-
-            ignored-key-positions = <21>;
-        };
 
         // Swapper for smart alt+tab
-
-        alt_swapper: alt_swapper {
-            compatible = "zmk,behavior-tri-state";
-            label = "ALTSWAPPER";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-
-            ignored-key-positions = <21>;
-        };
     };
 
     behaviors {
@@ -133,15 +131,15 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E            &kp R           &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P      &kp LEFT_ALT
-&mt LSHFT ESC  &kp A  &kp S  &kp D            &kp F           &kp G        &kp H      &kp J            &kp K      &kp L    &kp APOS   &kp LSHIFT
-&kp LCTRL      &kp Z  &kp X  &kp C            &kp V           &kp B        &kp N      &kp M            &kp COMMA  &kp DOT  &kp SLASH  &mo 4
-                             &mt LALT ESCAPE  &mt LGUI SPACE  &lt 1 TAB    &lt 2 RET  &lt 3 BACKSPACE  &lt 1 DEL
+&kp TAB            &kp Q        &kp W       &kp E               &kp R         &kp T    &kp Y  &kp U             &kp I            &kp O       &kp P                   &kp BACKSPACE
+&mt LSHIFT ESCAPE  &mt LCTRL A  &mt LALT S  &mt LCMD D          &mt LSHIFT F  &kp G    &kp H  &mt LEFT_SHIFT J  &mt LGUI K       &mt LALT L  &mt LCTRL SINGLE_QUOTE  &sk LEFT_SHIFT
+&kp LCTRL          &kp Z        &kp X       &kp C               &kp V         &kp B    &kp N  &kp M             &kp COMMA        &kp DOT     &kp SLASH               &kp SEMICOLON
+                                            &mt LGUI LC(SPACE)  &lt 1 SPACE   &mo 3    &mo 2  &lt 1 ENTER       &mt LALT DELETE
             >;
         };
 
-        num {
-            display-name = "nav1";
+        arrow {
+            display-name = "arrow";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -150,11 +148,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1         &kp N2              &kp N3               &kp NUMBER_4   &kp N5           &kp NUMBER_6    &kp N7         &kp N8              &kp N9     &kp N0      &kp LEFT_ALT
-&kp LSHFT  &kp LG(SPACE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LC(SPACE)  &kp BSPC         &kp LEFT_ARROW  &kp DOWN       &kp UP              &kp RIGHT  &caps_word  &kp LSHFT
-&kp LCTRL  &kp LC(ENTER)  &kp LG(LEFT_BRACE)  &kp LC(ENTER)        &kp LG(ENTER)  &kp LS(ENTER)    &tilde_macro    &home_tilde    &home_tilde_hidden  &g_        &g_         &kp RGUI
-                                              &kp LALT             &kp LGUI       &none            &kp RET         &kp BACKSPACE  &kp N0
+&kp TAB                &kp N1               &kp N2                  &kp N3              &kp NUMBER_4      &kp N5           &kp NUMBER_6           &kp N7          &kp N8        &kp N9           &kp N0      &kp BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &mt LCTRL LC(ENTER)  &mt LALT LS(LG(ENTER))  &mt LGUI LS(ENTER)  &mt LSHIFT EQUAL  &kp MINUS        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL              &none                &none                   &kp ASTERISK        &kp PLUS          &kp LC(SPACE)    &kp LC(RIGHT_BRACKET)  &kp HOME        &kp END       &trans           &none       &kp PAGE_DOWN
+                                                                    &kp LGUI            &kp LALT          &kp DOT          &kp COMMA              &kp RET         &kp DEL
             >;
+
+            label = "arrow";
         };
 
         sym {
@@ -167,30 +167,30 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp GRAVE        &kp TILDE     &kp HASH      &kp AMPS   &kp DOUBLE_QUOTES    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp LEFT_ALT
-&kp LSHFT  &kp EXCLAMATION  &kp UNDER     &kp COLON     &kp EQUAL  &kp PERCENT          &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LSHIFT
-&kp LCTRL  &kp TILDE        &kp QUESTION  &kp ASTERISK  &kp PLUS   &kp BACKSLASH        &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
-                                          &kp LALT      &kp LGUI   &kp DOT              &kp RET    &trans            &none
+&kp PIPE       &kp GRAVE                  &kp TILDE       &kp HASH        &kp AMPS              &quotes_space    &kp CARET     &kp AT                   &kp LEFT_BRACE             &kp RIGHT_BRACE             &kp DOLLAR               &tmux_visual
+&kp LESS_THAN  &mt LCTRL RS(EXCLAMATION)  &mt LALT UNDER  &mt LGUI COLON  &mt LEFT_SHIFT EQUAL  &kp PERCENT      &kp MINUS     &mt LSHIFT LEFT_BRACKET  &mt LGUI LEFT_PARENTHESIS  &mt LALT RIGHT_PARENTHESIS  &mt LCTRL RIGHT_BRACKET  &kp GREATER_THAN
+&kp LCTRL      &kp TILDE                  &kp QUESTION    &kp ASTERISK    &kp PLUS              &kp BACKSLASH    &tilde_macro  &kp SEMICOLON            &kp LESS_THAN              &kp GREATER_THAN            &kp PIPE                 &kp LCTRL
+                                                          &kp LGUI        &kp PERIOD            &kp COMMA        &none         &trans                   &none
             >;
         };
 
-        nav {
-            display-name = "nav2";
+        mouse {
+            display-name = "mouse";
             bindings = <
-&kp TAB     &kp LC(LALT)    &kp LS(LGUI)    &mmv MOVE_UP    &kp LS(LA(LGUI))  &kp LC(RA(LGUI))    &caps_word  &kp HOME   &kp END        &none      &none     &none
-&kp LSHIFT  &kp LG(LALT)    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp PAGE_UP         &kp LEFT    &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp HOME  &kp LSHFT
-&kp LCTRL   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp PAGE_DOWN       &none       &mkp LCLK  &mkp RCLK      &mkp MCLK  &kp END   &kp LCTRL
-                                            &kp LALT        &kp LGUI          &kp SPACE           &none       &kp RET    &kp BACKSPACE
+&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &none            &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp LALT   &kp LG(Z)           &kp LG(X)           &kp LG(C)            &kp LG(V)    &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
+&kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_          &tilde_macro     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+                                                   &none                &none        &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
 
         fun {
             display-name = "fun";
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6     &none       &none          &none         &none            &none       &none
-&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &caps_word  &kp C_MUTE     &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &kp LSHFT
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &none       &none          &none         &none            &none       &kp LGUI
-                                        &kp LALT      &kp LGUI      &none      &kp RET     &kp BACKSPACE  &kp LGUI
+&none       &kp F1        &kp F2        &kp F3        &kp F4          &kp F5      &kp F6      &kp F7      &kp F8        &kp F9           &kp F10     &kp F11
+&kp LSHIFT  &kp F11       &kp F12       &none         &none           &none       &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
+&kp LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &none       &none       &none       &none         &none            &none       &kp LALT
+                                        &kp LGUI      &kp LEFT_SHIFT  &kp LALT    &none       &none       &none
             >;
         };
     };
