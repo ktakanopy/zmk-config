@@ -52,7 +52,7 @@
 
         onehand {
             bindings = <&tog 4>;
-            key-positions = <38 37 36>;
+            key-positions = <1 2 3 4>;
             timeout-ms = <50>;
             layers = <1 2 3 0 4>;
         };
