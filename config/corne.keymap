@@ -61,6 +61,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
+
+        esc_left {
+            bindings = <&kp ESCAPE>;
+            key-positions = <15 16>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <14 15>;
+        };
     };
 
     macros {
