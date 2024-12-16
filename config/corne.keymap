@@ -44,12 +44,6 @@
             layers = <1 2 3 0 4>;
         };
 
-        swapper {
-            bindings = <&swapper>;
-            key-positions = <16 38>;
-            layers = <0>;
-        };
-
         onehand {
             bindings = <&tog 4>;
             key-positions = <1 2 3 4>;
@@ -61,17 +55,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
             layers = <0 3 1 2 4>;
+            timeout-ms = <50>;
         };
 
         esc_left {
             bindings = <&kp ESCAPE>;
             key-positions = <15 16>;
-            layers = <0 2 3 4>;
+            layers = <0 2 1 3 4>;
+            timeout-ms = <50>;
         };
 
         colon {
             bindings = <&kp COLON>;
             key-positions = <14 15>;
+            timeout-ms = <50>;
+            layers = <0 1 2 3 4>;
         };
     };
 
