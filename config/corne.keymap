@@ -5,10 +5,13 @@
  */
 
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "balanced";
@@ -186,10 +189,10 @@
 
         onehand {
             bindings = <
-&trans  &kp GRAVE  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &tmux_visual  &trans           &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
-&trans  &kp LG(Z)  &kp LG(X)           &kp LG(C)            &kp LG(V)     &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp SPACE  &kp LS(ENTER)       &kp LG(ENTER)        &kp ENTER     &kp BSPC         &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
-                                       &trans               &trans        &trans           &trans         &mkp LCLK       &mkp RCLK
+&kp LG(LS(NUMBER_4))  &kp GRAVE  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &tmux_visual  &trans           &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp LG(LS(N5))        &kp LG(Z)  &kp LG(X)           &kp LG(C)            &kp LG(V)     &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans                &kp SPACE  &kp LS(ENTER)       &kp LG(ENTER)        &kp ENTER     &kp BSPC         &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
+                                                     &trans               &trans        &trans           &trans         &mkp LCLK       &mkp RCLK
             >;
 
             label = "1_hand";
