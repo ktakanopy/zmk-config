@@ -149,7 +149,7 @@
 &kp TAB            &kp Q  &kp W        &kp E            &kp R        &kp T        &kp Y  &kp U        &kp I                     &kp O        &kp P             &kp BACKSPACE
 &mt LSHIFT ESCAPE  &kp A  &mt LCTRL S  &mt LCMD D       &mt LALT F   &kp G        &kp H  &mt LALT J   &mt LGUI K                &mt LCTRL L  &kp SINGLE_QUOTE  &sk LEFT_SHIFT
 &kp LCTRL          &kp Z  &kp X        &kp C            &kp V        &kp B        &kp N  &kp M        &kp COMMA                 &kp DOT      &kp SLASH         &kp SEMICOLON
-                                       &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &mo 2  &lt 1 ENTER  &custom_mod_tap_macro_backspace
+                                       &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &mo 2  &lt 1 ENTER  &custom_mod_tap_shift_backspace
             >;
         };
 
@@ -193,8 +193,8 @@
             display-name = "mouse";
             bindings = <
 &kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)   &kp LG(TAB)    &tmux_visual                &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
-&kp LALT   &none          &none               &kp ENTER             &kp BACKSPACE  &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &none          &kp LG(LS(N5))      &kp LG(LS(NUMBER_4))  &kp LG(LS(V))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+&kp LALT   &kp LG(Z)          &kp LG(X)       &kp LG(C)             &kp LG(V)    &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
+&kp LCTRL  &none          &kp BACKSPACE      &kp RET  &kp LG(LS(V))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                               &none                 &none          &none                       &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
