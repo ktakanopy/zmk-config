@@ -125,7 +125,7 @@
     };
 
     behaviors {
-        sk: sk {
+        sk2: sk2 {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
         };
@@ -133,7 +133,7 @@
         skmt: skmt {
             compatible = "zmk,behavior-mod-tap";
             #binding-cells = <2>;
-            bindings = <&sk>, <&kp>;
+            bindings = <&sk2>, <&kp>;
             timeout-ms = <250>;
         };
     };
