@@ -9,6 +9,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "balanced";
@@ -175,10 +178,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp PIPE       &kp GRAVE        &kp TILDE        &kp HASH        &kp AMPS        &quotes_space    &kp CARET     &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &tmux_visual
-&kp LESS_THAN  &kp EXCLAMATION  &mt LCTRL UNDER  &mt LGUI COLON  &mt LALT EQUAL  &kp PERCENT      &kp MINUS     &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GREATER_THAN
-&kp LCTRL      &kp TILDE        &kp QUESTION     &kp ASTERISK    &kp PLUS        &kp BACKSLASH    &tilde_macro  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
-                                                 &kp LGUI        &kp LSHIFT      &kp LCTRL        &none         &trans            &kp LSHIFT
+&kp PIPE       &kp GRAVE        &kp TILDE        &kp HASH        &kp AMPS        &quotes_space    &kp CARET  &kp AT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &tmux_visual
+&kp LESS_THAN  &kp EXCLAMATION  &mt LCTRL UNDER  &mt LGUI COLON  &mt LALT EQUAL  &kp PERCENT      &kp MINUS  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GREATER_THAN
+&kp LCTRL      &kp TILDE        &kp QUESTION     &kp ASTERISK    &kp PLUS        &kp BACKSLASH    &kp SLASH  &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
+                                                 &kp LGUI        &kp LSHIFT      &kp LCTRL        &none      &trans            &kp LSHIFT
             >;
         };
 
