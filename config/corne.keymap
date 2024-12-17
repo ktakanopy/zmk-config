@@ -32,6 +32,11 @@
     tapping-term-ms = <280>;
 };
 
+&sk {
+    release-after-ms = <500>;
+    quick-release;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -125,15 +130,10 @@
     };
 
     behaviors {
-        sk2: sk2 {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-        };
-
         skmt: skmt {
-            compatible = "zmk,behavior-mod-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&sk2>, <&kp>;
+            bindings = <&sk>, <&kp>;
             timeout-ms = <250>;
         };
     };
