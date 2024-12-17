@@ -39,10 +39,10 @@
         compatible = "zmk,combos";
 
         fun_trigger {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <40 41 39>;
             timeout-ms = <50>;
-            layers = <1 2 3 0 4>;
+            layers = <1 2 0 3>;
         };
 
         swapper {
@@ -104,6 +104,14 @@
             label = "QUOTES_SPACE";
         };
 
+        single_quote_space: single_quote_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_tap>, <&kp SQT &kp SPACE>;
+
+            label = "SINGLE_QUOTE_SPACE";
+        };
+
         // Swapper for smart alt+tab
 
         swapper: swapper {
@@ -141,8 +149,8 @@
             >;
         };
 
-        arrow {
-            display-name = "arrow";
+        lower {
+            display-name = "lower";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -151,13 +159,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB                &kp N1  &kp N2               &kp N3                &kp NUMBER_4        &kp N5           &kp NUMBER_6    &kp N7          &kp N8         &kp N9           &kp N0      &kp BACKSPACE
-&mt LEFT_SHIFT ESCAPE  &none   &mt LCTRL LG(ENTER)  &mt LSHIFT LS(ENTER)  &mt LALT LC(SPACE)  &kp MINUS        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL              &none   &none                &kp ASTERISK          &kp PLUS            &kp LC(SPACE)    &kp PAGE_UP     &kp HOME        &kp END        &trans           &none       &kp PAGE_DOWN
-                                                    &sk LGUI              &sk LSHIFT          &sk LALT         &kp DELETE      &kp RET         &kp BACKSPACE
+&kp TAB                &kp N1         &kp N2               &kp N3                &kp NUMBER_4        &kp N5      &kp NUMBER_6    &kp N7          &kp N8         &kp N9           &kp N0      &kp BACKSPACE
+&mt LEFT_SHIFT ESCAPE  &kp LG(GRAVE)  &mt LCTRL LG(ENTER)  &mt LSHIFT LS(ENTER)  &mt LALT LC(SPACE)  &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
+&kp LCTRL              &none          &none                &none                 &none               &none       &kp PAGE_UP     &kp HOME        &kp END        &trans           &none       &kp PAGE_DOWN
+                                                           &sk LGUI              &sk LSHIFT          &sk LALT    &kp DELETE      &kp RET         &kp BACKSPACE
             >;
 
-            label = "arrow";
+            label = "lower";
         };
 
         sym {
@@ -177,25 +185,13 @@
             >;
         };
 
-
-        raise_layer {
-            bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH          &kp DOLLAR      &kp PERCENT      &kp CARET      &kp AMPERSAND    &kp ASTERISK       &kp UNDER              &kp MINUS         &kp TILDE
-&kp LCTRL  &kp LESS_THAN    &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp BACKSLASH    &kp SLASH      &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &tilde_macro
-&kp LALT   &g_              &kp MINUS             &kp PLUS          &kp EQUAL       &kp COLON        &kp SEMICOLON  &kp QUESTION     &quotes_space      &single_quote_space    &tmux_visual      &trans
-                                                  &sk LGUI          &trans          &none            &trans         &trans           &trans
-            >;
-
-            label = "raise";
-        };
-
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp LG(GRAVE)       &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)  &tmux_visual     &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
-&kp LALT   &kp LG(Z)           &kp LG(X)           &kp LG(C)            &kp LG(V)    &kp LG(LS(Z))    &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &home_tilde_hidden  &home_tilde         &tilde_macro         &g_          &tilde_macro     &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
-                                                   &none                &none        &none            &mkp LCLK      &mkp RCLK       &mkp MCLK
+&kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)           &tmux_visual                &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
+&kp LALT   &kp LG(Z)      &kp LG(X)           &kp LG(C)            &kp LG(V)             &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
+&kp LCTRL  &none          &none               &kp LG(LS(N5))       &kp LG(LS(NUMBER_4))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+                                              &none                &none                 &none                       &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
 
