@@ -190,7 +190,7 @@
             bindings = <
 &kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)  &kp LG(TAB)           &tmux_visual                &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
 &kp LALT   &kp LG(Z)      &kp LG(X)           &kp LG(C)            &kp LG(V)             &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &none          &none               &kp LG(LS(N5))       &kp LG(LS(NUMBER_4))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+&kp LCTRL  &none          &kp LS(LG(V))       &kp LG(LS(N5))       &kp LG(LS(NUMBER_4))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
                                               &none                &none                 &none                       &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
