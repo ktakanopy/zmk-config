@@ -156,7 +156,8 @@
 &kp TAB            &kp Q  &kp W        &kp E            &kp R        &kp T        &kp Y  &kp U        &kp I                     &kp O        &kp P             &kp BACKSPACE
 &mt LSHIFT ESCAPE  &kp A  &mt LCTRL S  &mt LCMD D       &mt LALT F   &kp G        &kp H  &mt LALT J   &mt LGUI K                &mt LCTRL L  &kp SINGLE_QUOTE  &sk LEFT_SHIFT
 &kp LCTRL          &kp Z  &kp X        &kp C            &kp V        &kp B        &kp N  &kp M        &kp COMMA                 &kp DOT      &kp SLASH         &kp SEMICOLON
-                                       &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &mo 2  &lt 1 ENTER  &skmt LSHIFT BACKSPACE
+                                       &mt LGUI ESCAPE  &lt 1 SPACE  &lt 3 TAB    &mo 2  &lt 1 ENTER  &skmt BACKSPACE LSHIFT
+
             >;
         };
 
@@ -170,9 +171,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB                &kp N1         &kp N2               &kp N3              &kp NUMBER_4        &kp N5      &kp NUMBER_6    &kp N7          &kp N8         &kp N9           &kp N0      &kp BACKSPACE
-&mt LEFT_SHIFT ESCAPE  &kp LG(GRAVE)  &mt LCTRL LG(ENTER)  &mt LGUI LS(ENTER)  &mt LALT LC(SPACE)  &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &caps_word  &kp PAGE_UP
-&kp LCTRL              &none          &none                &none               &none               &none       &kp PAGE_UP     &kp HOME        &kp END        &trans           &none       &kp PAGE_DOWN
+&kp TAB                &kp N1         &kp N2               &kp N3              &kp NUMBER_4        &kp N5      &kp NUMBER_6    &kp N7          &kp N8         &kp N9           &kp N0      &none
+&mt LEFT_SHIFT ESCAPE  &kp LG(GRAVE)  &mt LCTRL LG(ENTER)  &mt LGUI LS(ENTER)  &mt LALT LC(SPACE)  &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &caps_word  &none
+&kp LCTRL              &none          &none                &none               &none               &none       &kp PAGE_UP     &kp HOME        &kp END        &kp PAGE_DOWN           &none       &none
                                                            &sk LGUI            &sk LSHIFT          &sk LALT    &kp DELETE      &kp RET         &kp BACKSPACE
             >;
 
@@ -189,9 +190,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp PIPE       &kp EXCLAMATION  &kp AT              &kp HASH        &kp DOLLAR      &kp PERCENT            &kp CARET  &kp AT            &kp ASTERISK          &kp UNDERSCORE         &kp MINUS          &tmux_visual
-&kp LESS_THAN  &kp GRAVE        &mt LCTRL QUESTION  &mt LGUI COLON  &mt LALT EQUAL  &kp BACKSLASH          &kp SLASH  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GREATER_THAN
-&kp LCTRL      &kp TILDE        &home_tilde_hidden  &g_             &quotes_space   &single_quote_space    &kp PIPE   &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE           &kp LCTRL
+&none       &kp EXCLAMATION  &kp AT              &kp HASH        &kp DOLLAR      &kp PERCENT            &kp CARET  &kp AMPERSAND      &kp ASTERISK          &kp UNDERSCORE         &kp MINUS         &none 
+&none       &kp GRAVE        &mt LCTRL QUESTION  &mt LGUI COLON  &mt LALT EQUAL  &kp BACKSLASH          &kp SLASH  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none 
+&none      &kp TILDE        &home_tilde_hidden  &g_             &quotes_space   &single_quote_space    &kp PIPE   &kp SEMICOLON     &kp LESS_THAN         &kp GREATER_THAN       &kp PIPE            &none 
                                                     &kp LGUI        &kp LSHIFT      &kp LCTRL              &none      &trans            &kp LSHIFT
             >;
         };
@@ -199,9 +200,9 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&kp TAB    &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)   &kp LG(TAB)    &tmux_visual                &trans         &trans          &mmv MOVE_UP    &trans           &trans           &trans
-&kp LALT   &kp LG(Z)          &kp LG(X)       &kp LG(C)             &kp LG(V)    &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &kp LGUI
-&kp LCTRL  &none          &kp BACKSPACE      &kp RET  &kp LG(LS(V))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &kp LALT
+&none     &kp LG(GRAVE)  &kp LG(LEFT_BRACE)  &kp LG(RIGHT_BRACE)   &kp LG(TAB)    &tmux_visual                &trans         &trans          &mmv MOVE_UP    &trans           &trans          &none 
+&none    &kp LG(Z)          &kp LG(X)       &kp LG(C)             &kp LG(V)    &kp LG(LS(Z))               &kp PAGE_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &sk LSHIFT       &none 
+&none   &none          &kp BACKSPACE      &kp RET  &kp LG(LS(V))  &kp LC(LS(LG(NUMBER_3)))    &kp PAGE_DOWN  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT   &none 
                                               &none                 &none          &none                       &mkp LCLK      &mkp RCLK       &mkp MCLK
             >;
         };
@@ -209,9 +210,9 @@
         fun {
             display-name = "fun";
             bindings = <
-&none       &kp F1        &kp F2        &kp F3        &kp F4          &kp F5      &kp F6      &kp F7      &kp F8        &kp F9           &kp F10     &kp F11
-&kp LSHIFT  &kp F11       &kp F12       &none         &none           &none       &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
-&kp LCTRL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &none       &none       &none       &none         &none            &none       &kp LALT
+&none       &kp F1        &kp F2        &kp F3        &kp F4          &kp F5      &kp F6      &kp F7      &kp F8        &kp F9           &kp F10     &none 
+&none   &kp F11       &kp F12       &none         &none           &none       &caps_word  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY  &none
+&none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &none       &none       &none       &none         &none            &none      &none 
                                         &kp LGUI      &kp LEFT_SHIFT  &kp LALT    &none       &none       &none
             >;
         };
