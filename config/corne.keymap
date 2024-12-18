@@ -32,10 +32,6 @@
     tapping-term-ms = <280>;
 };
 
-&sk {
-    release-after-ms = <500>;
-    quick-release;
-};
 
 / {
     combos {
@@ -136,7 +132,7 @@
             tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&sk>, <&kp>;
+            bindings = <&kp>, <&sk>;
         };
     };
 
