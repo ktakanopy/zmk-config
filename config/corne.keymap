@@ -31,7 +31,10 @@
     flavor = "balanced";
     tapping-term-ms = <280>;
 };
-
+&sk {
+    release-after-ms = <300>;
+    quick-release;
+};
 
 / {
     combos {
